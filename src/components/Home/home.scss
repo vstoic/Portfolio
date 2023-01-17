@@ -1,37 +1,70 @@
 .home-page {
-  .text-area {
+  .text-zone {
     position: absolute;
-    left: 10%;
+    left: 12%;
     top: 50%;
-    transform: translate(-50%);
+    transform: translateY(-57%);
     width: 40%;
     max-height: 90%;
   }
   h1 {
     color: #4d4d4e;
     font-size: 53px;
-    font-family: 'Coolvetica';
-    font-weight: 400;
-  }
+    font-weight: 300;
 
-  &::before {
-    content: '<h1>';
-    font-family: 'la belle aurore';
-    color: #4d4d4e;
-    font-size: 18px;
-    position: absolute;
-    margin-top: -40px;
-    left: 15px;
-    opacity: 0.6;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    &::before {
+      content: '<h1>';
+      font-family: helvetica;
+      color: #4d4d4e;
+      font-size: 18px;
+      font-weight: 100;
+      position: absolute;
+      margin-top: -40px;
+      left: 15px;
+      opacity: 0.6;
+    }
+    &::after {
+      content: '</h1>';
+      font-family: helvetica;
+      color: #4d4d4e;
+      font-size: 18px;
+      font-weight: 100;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 20px;
+      animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
+    }
   }
-  &::after {
-    content: '</h1>';
-    font-family: 'la belle aurore';
+  h2 {
     color: #4d4d4e;
-    font-size: 18px;
-    position: absolute;
-    margin-top: 18px;
-    margin-left: 20px;
-    animation: fadeIn 1s 1.7s backwards;
+    margin-top: 15px;
+    font-weight: 100;
+    font-size: 14px;
+    font-family: helvetica;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+  
+  .flat-button {
+    color: #4d4d4e;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 4px;
+    font-family: helvetica;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #4d4d4e;
+    margin-top: 25px;
+    float: left;
+    animation: fadeIn 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: #4d4d4e;
+      color: #fff;
+    }
   }
 }

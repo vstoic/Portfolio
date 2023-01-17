@@ -7,7 +7,6 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-
 const Sidebar = () => {
   return (
     <div className="nav-bar">
@@ -16,13 +15,18 @@ const Sidebar = () => {
       </Link>
       <nav>
         <NavLink exact="true" activeclassname="active" to="/">
-          <HomeOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
+          <HomeOutlinedIcon
+            sx={{
+              fontSize: 32,
+              color: '#4d4d4e',
+            }}
+          />
         </NavLink>
         <NavLink exact="true" activeclassname="about-link" to="/about">
-          <PermIdentityIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
+          <PermIdentityIcon sx={{ fontSize: 34, color: '#4d4d4e' }} />
         </NavLink>
         <NavLink exact="true" activeclassname="contact-link" to="/contact">
-          <EmailOutlinedIcon sx={{ fontSize: 30, color: '#4d4d4e' }} />
+          <EmailOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
         </NavLink>
       </nav>
       <ul>
@@ -37,12 +41,12 @@ const Sidebar = () => {
         </li>
         <li>
           <a target="_blank" rel="noreferrer" href="https://github.com/vstoic">
-            <LinkedInIcon sx={{ fontSize: 22, color: '#4d4d4e'}} />
+            <LinkedInIcon sx={{ fontSize: 22, color: '#4d4d4e' }} />
           </a>
         </li>
       </ul>
     </div>
   );
-}
+};
 
 export default Sidebar;
