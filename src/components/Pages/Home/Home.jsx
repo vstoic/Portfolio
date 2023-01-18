@@ -5,6 +5,8 @@ import './home.scss';
 import LogoHome from '../../Logo/LogoHome';
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import Loader from 'react-loaders';
+import Canvas from './Canvas/Canvas';
+// import Canvas from '../../Canvas/Canvas';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -48,6 +50,7 @@ const Home = () => {
         <LogoHome />
       </div>
         <Loader type="ball-clip-rotate-multiple" />
+        {/* <Canvas /> */}
     </>
   );
 

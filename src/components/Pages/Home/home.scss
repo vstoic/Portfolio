@@ -15,7 +15,7 @@
     font-family: Arial, Helvetica, sans-serif;
     
     &::before {
-      content: '<h1>';
+      content: '';
       font-family: helvetica;
       color: #4d4d4e;
       font-size: 12px;
@@ -26,7 +26,7 @@
       opacity: 0.6;
     }
     &::after {
-      content: '</h1>';
+      content: '';
       font-family: helvetica;
       color: #4d4d4e;
       font-size: 12px;
@@ -39,7 +39,7 @@
     }
   }
   h2 {
-    color: #4d4d4e;
+    color: #006adf;
     margin-top: 15px;
     font-weight: 100;
     font-size: 14px;

@@ -25,20 +25,25 @@ const About = () => {
             />
           </h1>
           <p>
-            This is my bio,This is my bio,This is my bio,This is my bio,This is
-            my bio, This is my bio, This is my bio, This is my bio, This is my
-            bio, This is my bio, This is my bio, This is my bio, This is my bio,
-            This is my bio, This is my bio,
+            Victor is an aspiring full stack software engineer with a diverse
+            background in real estate sales. He made a career change and
+            attended an app academy bootcamp to acquire the necessary skills and
+            knowledge to excel in the field of software engineering. Victor's
+            passion for technology, coupled with his strong work ethic, will
+            enable him to make valuable contributions to any team.
           </p>
           <p>
-            This is my bio, This is my bio, This is my bio, This is my bio,This
-            is my bio, This is my bio, This is my bio, This is my bio, This is
-            my bio, This is my bio.
+            In his free time, Victor enjoys staying active and exploring his
+            interests in photography/design, trying new resturants, and
+            discovering new music. He is also an adrenaline junkie who enjoys
+            physical activities such as olympic weightlifting, hiking,
+            bouldering, and basketball.
           </p>
           <p>
-            This is my bio, This is my bio, This is my bio, This is my bio,This
-            is my bio, This is my bio, This is my bio, This is my bio, This is
-            my bio, This is my bio.
+            Victor is always open to new opportunities and collaborations in the
+            field of software engineering and technology. He welcomes anyone to reach out to
+            him for potential projects or to discuss how he can bring his skills
+            and passion to your organization.
           </p>
         </div>
 
