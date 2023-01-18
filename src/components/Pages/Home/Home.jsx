@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './home.scss';
-import LogoHome from '../Logo/LogoHome';
-import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import LogoHome from '../../Logo/LogoHome';
+import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = [' ', 'V', 'i', 'c', 't', 'o', 'r'];
