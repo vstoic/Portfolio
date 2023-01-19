@@ -2,9 +2,9 @@ import './logoHome.scss';
 import { useRef } from 'react';
 import Logo from './../../assets/images/logo.png';
 const LogoHome = () => {
-  const bgRef = useRef();
-  const outlineLogoRef = useRef();
-  const solidLogoRef = useRef();
+  // const bgRef = useRef();
+  // const outlineLogoRef = useRef();
+  // const solidLogoRef = useRef();
 
   return (
     <div className="logo-container">

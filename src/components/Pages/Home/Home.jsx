@@ -5,7 +5,7 @@ import './home.scss';
 import LogoHome from '../../Logo/LogoHome';
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import Loader from 'react-loaders';
-import Canvas from './Canvas/Canvas';
+// import Canvas from './Canvas/Canvas';
 // import Canvas from '../../Canvas/Canvas';
 
 const Home = () => {
