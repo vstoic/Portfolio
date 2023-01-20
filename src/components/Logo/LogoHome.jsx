@@ -1,5 +1,5 @@
 import './logoHome.scss';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 import Logo from './../../assets/images/logo.png';
 const LogoHome = () => {
   // const bgRef = useRef();

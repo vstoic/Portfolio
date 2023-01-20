@@ -6,6 +6,7 @@ import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 
 const Sidebar = () => {
   return (
@@ -24,6 +25,9 @@ const Sidebar = () => {
         </NavLink>
         <NavLink exact="true" activeclassname="about-link" to="/about">
           <PermIdentityIcon sx={{ fontSize: 34, color: '#4d4d4e' }} />
+        </NavLink>
+        <NavLink exact="true" activeclassname="project-link" to="/project">
+          <AccountTreeOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
         </NavLink>
         <NavLink exact="true" activeclassname="contact-link" to="/contact">
           <EmailOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />

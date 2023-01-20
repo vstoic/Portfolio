@@ -37,16 +37,15 @@ const About = () => {
             interests in photography/design, trying new resturants, and
             discovering new music. He is also an adrenaline junkie who enjoys
             physical activities such as olympic weightlifting, hiking,
-            bouldering, and basketball.
+            bouldering, basketball and pushing to prod on a friday night.
           </p>
           <p>
             Victor is always open to new opportunities and collaborations in the
-            field of software engineering and technology. He welcomes anyone to reach out to
-            him for potential projects or to discuss how he can bring his skills
-            and passion to your organization.
+            field of software engineering and technology. He welcomes anyone to
+            reach out to him for potential projects or to discuss how he can
+            bring his skills and passion to your organization.
           </p>
         </div>
-
         {/* <div className="stage-cube-count">
           <div className="cubespinner">
             <div className="face1"></div>
@@ -57,6 +56,10 @@ const About = () => {
             <div className="face6"></div>
           </div>
         </div> */}
+      <div className='profile-picture'>
+        <img src="/AboutImage.png" alt="" className="about-image" />
+        <img src="/AboutImage.png" alt="" className="about-image2" />
+      </div>
       </div>
       <Loader type="ball-clip-rotate-multiple" />
     </>

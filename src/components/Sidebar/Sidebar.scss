@@ -81,6 +81,11 @@
       }
       &:nth-child(3) {
         &:after {
+          content: 'PROJECT';
+        }
+      }
+      &:nth-child(4) {
+        &:after {
           content: 'CONTACT';
         }
       }
