@@ -19,7 +19,7 @@ const About = () => {
         <div className="text-zone">
           <h1>
             <AnimatedLetters
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+              strArray={"About Me".split('')}
               letterClass={letterClass}
               idx={15}
             />

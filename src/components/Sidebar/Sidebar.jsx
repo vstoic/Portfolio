@@ -7,6 +7,8 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 
 const Sidebar = () => {
   return (
@@ -49,6 +51,7 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+      <MenuSharpIcon sx={{ fontSize: 32, color: '#4d4d4e' }} className="menu-icon" />
     </div>
   );
 };

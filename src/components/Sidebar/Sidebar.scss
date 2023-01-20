@@ -37,6 +37,9 @@
       height: 70px;
       position: relative;
       text-decoration: none;
+      font-family: 'helvetica';
+      // font-size: 12px;
+      font-weight: 100;
 
       i {
         transition: all 0.3s ease-out;
@@ -57,7 +60,7 @@
       &:after {
         content: '';
         font-size: 12px;
-        letter-spacing: 1px;
+        letter-spacing: .8px;
         position: absolute;
         top: 10px;
         display: block;
@@ -72,6 +75,7 @@
       &:first-child {
         &:after {
           content: 'HOME';
+          
         }
       }
       &:nth-child(2) {
@@ -124,3 +128,54 @@
     }
   }
 }
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-bar {
+    background: transparent;
+    position: initial;
+    height: auto;
+    min-height: auto;
+
+    ul, nav {
+      display: none;
+    }
+
+    nav {
+      // display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(250, 250, 250);
+      top: 0;
+      left: 0;
+      position: fixed;
+      z-index: 2;
+      margin: 0;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      a:after {
+        opacity: 1;
+        position: initial;
+        width: auto;
+        margin-left: 10px;
+      }
+
+      a svg {
+        opacity: 1 !important;
+      }
+    }
+
+    .menu-icon {
+      display: block;
+    }
+  }
+};
+
