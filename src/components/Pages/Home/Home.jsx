@@ -47,7 +47,7 @@ const Home = () => {
             Contact Me
           </Link>
         </div>
-        <LogoHome />
+        {/* <LogoHome /> */}
       </div>
         <Loader type="ball-clip-rotate-multiple" />
         {/* <Canvas /> */}

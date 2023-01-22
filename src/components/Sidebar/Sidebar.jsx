@@ -1,4 +1,5 @@
 import './Sidebar.scss';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -7,16 +8,18 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
-import MenuIcon from '@mui/icons-material/Menu';
-import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <div className="nav-bar">
-      <Link className="logo" to="/">
+      <Link className="logo" to="/" onClick={() => setShowSidebar(false)}>
         <img src={Logo} alt="logo" />
       </Link>
-      <nav>
+      <nav className={showSidebar ? 'mobile-show' : ''}>
         <NavLink exact="true" activeclassname="active" to="/">
           <HomeOutlinedIcon
             sx={{
@@ -34,6 +37,13 @@ const Sidebar = () => {
         <NavLink exact="true" activeclassname="contact-link" to="/contact">
           <EmailOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
         </NavLink>
+        <FontAwesomeIcon
+          onClick={() => setShowSidebar(false)}
+          icon={faClose}
+          size="3x"
+          color="#4d4d4e"
+          className='close-icon'
+        />
       </nav>
       <ul>
         <li>
@@ -51,7 +61,13 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-      <MenuSharpIcon sx={{ fontSize: 32, color: '#4d4d4e' }} className="menu-icon" />
+      <FontAwesomeIcon
+        onClick={() => setShowSidebar(true)}
+        icon={faBars}
+        color="#4d4d4e"
+        size="3x"
+        className='menu-icon'
+      />
     </div>
   );
 };

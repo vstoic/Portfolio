@@ -28,7 +28,7 @@
     position: absolute;
     height: 210px;
     top: 50%;
-    margin-top: -100px;
+    margin-top: -120px;
     width: 100%;
 
     a {
@@ -68,7 +68,8 @@
         text-align: center;
         align-content: start;
         opacity: 0;
-        font-weight: bold;
+        font-weight: light;
+        -webkit-transition: all 0.3s ease-in-out;
         transition: all .3s ease-out;
       }
 
@@ -129,9 +130,10 @@
   }
 }
 
-.menu-icon {
+.menu-icon, .close-icon {
   display: none;
 }
+
 
 @media screen and (max-width: 1200px) {
   .nav-bar {
@@ -139,10 +141,11 @@
     position: initial;
     height: auto;
     min-height: auto;
-
+    
     ul, nav {
       display: none;
     }
+
 
     nav {
       // display: block;
@@ -154,6 +157,10 @@
       position: fixed;
       z-index: 2;
       margin: 0;
+      
+      &.mobile-show {
+        display: block;
+      }
 
       a {
         display: flex;
@@ -173,8 +180,12 @@
       }
     }
 
-    .menu-icon {
+    .menu-icon, 
+    .close-icon {
       display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
     }
   }
 };

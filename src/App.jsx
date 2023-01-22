@@ -5,6 +5,7 @@ import Home from './components/Pages/Home/Home'
 import About from './components/Pages/About/About'
 import Contact from './components/Pages/Contact/Contact'
 import Project from './components/Pages/Project/Project'
+import '@fortawesome/fontawesome-svg-core/styles.css';
 // import Loader from 'react-loaders'
 
 function App() {
