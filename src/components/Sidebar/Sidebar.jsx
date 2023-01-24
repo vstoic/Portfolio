@@ -17,34 +17,59 @@ const Sidebar = () => {
   return (
     <div className="nav-bar">
       <Link className="logo" to="/" onClick={() => setShowSidebar(false)}>
-        <img src={Logo} alt="logo" />
+        <img onClick={() => setShowSidebar(false)} src={Logo} alt="logo" />
       </Link>
-      <nav className={showSidebar ? 'mobile-show' : ''}>
-        <NavLink exact="true" activeclassname="active" to="/">
-          <HomeOutlinedIcon
-            sx={{
-              fontSize: 32,
-              color: '#4d4d4e',
-            }}
+      <div className={showSidebar ? 'mobile-show' : ''}>
+        <nav>
+          <NavLink
+            onClick={() => setShowSidebar(false)}
+            exact="true"
+            activeclassname="active"
+            to="/"
+          >
+            <HomeOutlinedIcon
+              sx={{
+                fontSize: 32,
+                color: '#4d4d4e',
+              }}
+            />
+          </NavLink>
+          <NavLink
+            onClick={() => setShowSidebar(false)}
+            exact="true"
+            activeclassname="about-link"
+            to="/about"
+          >
+            <PermIdentityIcon sx={{ fontSize: 34, color: '#4d4d4e' }} />
+          </NavLink>
+          <NavLink
+            onClick={() => setShowSidebar(false)}
+            exact="true"
+            activeclassname="project-link"
+            to="/project"
+          >
+            <AccountTreeOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
+          </NavLink>
+          <NavLink
+            onClick={() => setShowSidebar(false)}
+            exact="true"
+            activeclassname="contact-link"
+            to="/contact"
+          >
+            <EmailOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
+          </NavLink>
+        </nav>
+        {showSidebar && (
+          <FontAwesomeIcon
+            onClick={() => setShowSidebar(false)}
+            icon={faClose}
+            size="4x"
+            color="#4d4d4e"
+            cursor="pointer"
+            className="close-icon"
           />
-        </NavLink>
-        <NavLink exact="true" activeclassname="about-link" to="/about">
-          <PermIdentityIcon sx={{ fontSize: 34, color: '#4d4d4e' }} />
-        </NavLink>
-        <NavLink exact="true" activeclassname="project-link" to="/project">
-          <AccountTreeOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
-        </NavLink>
-        <NavLink exact="true" activeclassname="contact-link" to="/contact">
-          <EmailOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
-        </NavLink>
-        <FontAwesomeIcon
-          onClick={() => setShowSidebar(false)}
-          icon={faClose}
-          size="3x"
-          color="#4d4d4e"
-          className='close-icon'
-        />
-      </nav>
+        )}
+      </div>
       <ul>
         <li>
           <a
@@ -61,12 +86,14 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+
       <FontAwesomeIcon
         onClick={() => setShowSidebar(true)}
         icon={faBars}
         color="#4d4d4e"
-        size="3x"
-        className='menu-icon'
+        size="4x"
+        cursor="pointer"
+        className="menu-icon"
       />
     </div>
   );

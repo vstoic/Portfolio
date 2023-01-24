@@ -16,6 +16,14 @@
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('ttf');
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
 input,
 textarea {
   font-family: 'helvetica';

@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './home.scss';
-import LogoHome from '../../Logo/LogoHome';
+// import LogoHome from '../../Logo/LogoHome';
+import Logo from '../../../assets/images/logo.png';
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import Loader from 'react-loaders';
 // import Canvas from './Canvas/Canvas';
@@ -10,14 +11,13 @@ import Loader from 'react-loaders';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  const nameArray = " Victor Cheng,".split('');
-  const jobArray = "Software Engineer.".split('');
+  const nameArray = ' Victor Cheng,'.split('');
+  const jobArray = 'Software Engineer.'.split('');
 
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 4000);
-
   }, []);
 
   return (
@@ -47,13 +47,14 @@ const Home = () => {
             Contact Me
           </Link>
         </div>
-        {/* <LogoHome /> */}
+        <div className="logo-container">
+          <img src={Logo} alt="logo" className="solid-logo" />
+        </div>
       </div>
-        <Loader type="ball-clip-rotate-multiple" />
-        {/* <Canvas /> */}
+      <Loader type="ball-clip-rotate-multiple" />
+      {/* <Canvas /> */}
     </>
   );
-
 };
 
 export default Home;
