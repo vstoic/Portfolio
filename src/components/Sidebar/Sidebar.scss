@@ -188,6 +188,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 30px;
       }
 
       a:after {
@@ -195,6 +196,10 @@
         position: initial;
         width: auto;
         margin-left: 10px;
+        font-size: 15px;
+        text-decoration: none;
+        color: #4d4d4e;
+        font-weight: 400;
       }
 
       a svg {

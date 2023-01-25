@@ -4,27 +4,6 @@
   position: absolute;
 }
 
-.top-tags {
-  bottom: auto;
-  top: 35px;
-}
-
-.tags {
-  color: #4d4d4e;
-  opacity: 0.6;
-  position: absolute;
-  bottom: 0;
-  left: 120px;
-  font-size: 12px;
-  font-family: helvetica;
-  font-weight: 100;
-}
-
-.bottom-tag-html {
-  margin-left: -20px;
-  color: #4d4d4e;
-}
-
 .container {
   width: 100%;
   will-change: contents;
@@ -81,7 +60,7 @@
     }
 
     p {
-      font-size: 13px;
+      font-size: 14px;
       color: #4d4d4e;
       font-family: helvetica;
       font-weight: 100;

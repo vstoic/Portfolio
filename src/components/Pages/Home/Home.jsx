@@ -11,8 +11,10 @@ import Loader from 'react-loaders';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  const nameArray = ' Victor Cheng,'.split('');
-  const jobArray = 'Software Engineer.'.split('');
+  const firstName = ' Victor '.split('');
+  const lastName = 'Cheng,'.split('');
+  const jobArray1 = 'Software '.split('');
+  const jobArray2 = 'Engineer.'.split('');
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,14 +34,24 @@ const Home = () => {
             <span className={`${letterClass} _14`}>'m </span>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={nameArray}
+              strArray={firstName}
               idx={15}
+            />
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={lastName}
+              idx={23}
             />
             <br />
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={jobArray}
-              idx={23}
+              strArray={jobArray1}
+              idx={30}
+            />
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={jobArray2}
+              idx={39}
             />
           </h1>
           <h2> Frontend Engineer / JavaScript Expert / FullStack Engineer </h2>

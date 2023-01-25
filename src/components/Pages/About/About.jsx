@@ -16,10 +16,14 @@ const About = () => {
   return (
     <>
       <div className="container about-page">
+        <div className="profile-picture">
+          <img src="/AboutImageFixed.png" alt="" className="about-image" />
+          {/* <img src="/AboutImageFixed.png" alt="" className="about-image2" /> */}
+        </div>
         <div className="text-zone">
           <h1>
             <AnimatedLetters
-              strArray={"About Me".split('')}
+              strArray={'About Me'.split('')}
               letterClass={letterClass}
               idx={15}
             />
@@ -46,20 +50,6 @@ const About = () => {
             bring his skills and passion to your organization.
           </p>
         </div>
-        {/* <div className="stage-cube-count">
-          <div className="cubespinner">
-            <div className="face1"></div>
-            <div className="face2"></div>
-            <div className="face3"></div>
-            <div className="face4"></div>
-            <div className="face5"></div>
-            <div className="face6"></div>
-          </div>
-        </div> */}
-      <div className='profile-picture'>
-        <img src="/AboutImage.png" alt="" className="about-image" />
-        <img src="/AboutImage.png" alt="" className="about-image2" />
-      </div>
       </div>
       <Loader type="ball-clip-rotate-multiple" />
     </>

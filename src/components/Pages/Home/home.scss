@@ -13,6 +13,7 @@
     line-height: 53px;
     font-weight: 300;
     padding-left: 8%;
+    padding-top: 90px;
     font-family: Arial, Helvetica, sans-serif;
 
     &::before {
@@ -61,7 +62,7 @@
     padding: 10px 8px;
     border: 1px solid #4d4d4e;
     margin-top: 25px;
-    
+    margin-left: 10%;
     float: left;
     animation: fadeIn 1s 1.8s backwards;
     white-space: nowrap;

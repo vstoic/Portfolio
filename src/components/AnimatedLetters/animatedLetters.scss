@@ -20,9 +20,12 @@
 
 }
 
+.word {
+  white-space: nowrap;
+}
 
-@for $i from 1 through 40 {
+@for $i from 1 through 47 {
   .text-animate._#{$i} {
-    animation-delay: #{$i/ 10}s;
+    animation-delay: #{$i/ 13}s;
   }
 }
