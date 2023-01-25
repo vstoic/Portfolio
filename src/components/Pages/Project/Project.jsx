@@ -1,10 +1,11 @@
 import './project.scss';
 import Loader from 'react-loaders';
+import WorkCarousel from './WorkCarousel/WorkCarousel';
 const Project = () => {
   return (
     <>
       <div className="container project-page">
-        <div className="text-zone">hello</div>
+        <WorkCarousel />
       </div>
       <Loader type="ball-clip-rotate-multiple" />
     </>

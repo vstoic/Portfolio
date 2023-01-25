@@ -1,5 +1,6 @@
 import './about.scss';
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
+import Carousel from './Corousel/Carousel';
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 
@@ -16,16 +17,20 @@ const About = () => {
   return (
     <>
       <div className="container about-page">
-        <div className="profile-picture">
-          <img src="/AboutImageFixed.png" alt="" className="about-image" />
-          {/* <img src="/AboutImageFixed.png" alt="" className="about-image2" /> */}
-        </div>
+        {/* <div className="profile-picture"> */}
+        {/* <img src="/AboutImageFixed.png" alt="" className="about-image2" /> */}
+        {/* </div> */}
         <div className="text-zone">
-          <h1>
+          <h1 className="about-title">
             <AnimatedLetters
-              strArray={'About Me'.split('')}
+              strArray={'About '.split('')}
               letterClass={letterClass}
               idx={15}
+            />
+            <AnimatedLetters
+              strArray={'Me'.split('')}
+              letterClass={letterClass}
+              idx={21}
             />
           </h1>
           <p>
@@ -49,7 +54,10 @@ const About = () => {
             reach out to him for potential projects or to discuss how he can
             bring his skills and passion to your organization.
           </p>
+
+          <Carousel />
         </div>
+        <img src="/AboutImageFixed.png" alt="" className="about-image" />
       </div>
       <Loader type="ball-clip-rotate-multiple" />
     </>
