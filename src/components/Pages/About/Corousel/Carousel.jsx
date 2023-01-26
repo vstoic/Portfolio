@@ -1,24 +1,19 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
+import React from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Pagination, Navigation } from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
 import './carousel.scss';
-
-// import required modules
-import { Pagination, Navigation } from 'swiper';
+import { js, react, html, css, sass, aws, gmaps, git, jquery, node, express, mongodb, heroku, npm, postgres, rails, redux, ruby, sql, tailwind, webpack } from './index.jsx';
 
 export default function Carousel() {
   return (
     <>
-      <Swiper
-        slidesPerView={4}
-        spaceBetween={0}
-        slidesPerGroup={4}
+      {/* <Swiper
+        slidesPerView={5}
+        spaceBetween={30}
+        slidesPerGroup={5}
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
@@ -26,17 +21,49 @@ export default function Carousel() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        // className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>
+          <img src={js} alt="" className="icon-img" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={html} alt="" className="icon-img" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={css} alt="" className="icon-img" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={react} alt="" className="icon-img" />
+        </SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>
         <SwiperSlide>Slide 8</SwiperSlide>
-      </Swiper>
+        <SwiperSlide>Slide 8</SwiperSlide>
+      </Swiper> */}
+
+      <div className="about-grid-container">
+          <img src={react} alt="" className="icon-img" />
+          <img src={js} alt="" className="icon-img" />
+          <img src={html} alt="" className="icon-img" />
+          <img src={css} alt="" className="icon-img" />
+          <img src={sass} alt="" className="icon-img" />
+          <img src={aws} alt="" className="icon-img" />
+          <img src={gmaps} alt="" className="icon-img" />
+          <img src={git} alt="" className="icon-img" />
+          <img src={jquery} alt="" className="icon-img" />
+          <img src={node} alt="" className="icon-img" />
+          <img src={express} alt="" className="icon-img" />
+          <img src={mongodb} alt="" className="icon-img" />
+          <img src={heroku} alt="" className="icon-img" />
+          <img src={npm} alt="" className="icon-img" />
+          <img src={postgres} alt="" className="icon-img" />
+          <img src={rails} alt="" className="icon-img" />
+          <img src={redux} alt="" className="icon-img" />
+          <img src={ruby} alt="" className="icon-img" />
+          <img src={sql} alt="" className="icon-img" />
+          <img src={tailwind} alt="" className="icon-img" />
+          <img src={webpack} alt="" className="icon-img" />
+      </div>
     </>
   );
 }

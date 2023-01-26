@@ -54,8 +54,9 @@ const About = () => {
             reach out to him for potential projects or to discuss how he can
             bring his skills and passion to your organization.
           </p>
-
-          <Carousel />
+          <div className='carousel-container'>
+            <Carousel />
+          </div>
         </div>
         <img src="/AboutImageFixed.png" alt="" className="about-image" />
       </div>
