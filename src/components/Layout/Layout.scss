@@ -20,6 +20,16 @@
   animation-delay: 1s;
 }
 
+.container.project-page {
+  align-items: flex-start;
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+  }
+}
+
 
 .container.contact-page,
 .container.about-page {

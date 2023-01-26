@@ -1,4 +1,13 @@
-.container project-page {
+
+.about-title {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 42px;
+  font-family: helvetica;
+  color: #4d4d4e;
+  font-weight: 100;
+  position: relative;
+  margin-top: 10vh;
 }
