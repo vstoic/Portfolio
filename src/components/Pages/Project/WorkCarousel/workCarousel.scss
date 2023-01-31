@@ -24,3 +24,32 @@
   display: block;
   width: 100%;
 }
+@media screen and (max-width: 1200px){
+.swiper {
+    width: 94vw;
+    height: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.swiper-wrapper {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 70vw;
+  height: auto;
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+}

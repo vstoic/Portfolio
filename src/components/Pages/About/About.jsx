@@ -4,15 +4,14 @@ import Carousel from './Corousel/Carousel';
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 
-
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('text-animate');
 
   useEffect(() => {
     setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    },3000)
-  }, [])
+      setLetterClass('text-animate-hover');
+    }, 3000);
+  }, []);
 
   return (
     <>
@@ -54,15 +53,23 @@ const About = () => {
             reach out to him for potential projects or to discuss how he can
             bring his skills and passion to your organization.
           </p>
-          <div className='carousel-container'>
+
+          <div className="carousel-container">
+            <a
+              href="https://docs.google.com/document/d/1yDfeAMSyqx7muGjSVbulZClK0JP9gR3ZTr7VOHfxUmY/edit?usp=sharing"
+              className="flat-button"
+            >
+              Resume
+            </a>
             <Carousel />
           </div>
         </div>
+
         <img src="/AboutImageFixed.png" alt="" className="about-image" />
       </div>
       <Loader type="ball-clip-rotate-multiple" />
     </>
   );
-}
+};
 
 export default About;

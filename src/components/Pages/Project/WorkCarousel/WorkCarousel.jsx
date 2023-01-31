@@ -33,6 +33,7 @@ export default function WorkCarousel() {
       >
         <SwiperSlide>
           <img src="/felp-thumbnail.gif" alt="loading..." />
+          <p>hello</p>
         </SwiperSlide>
         <SwiperSlide>
           <img src="/timerfighter-thumbnail.gif" alt="loading..." />

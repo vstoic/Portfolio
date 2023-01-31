@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     // align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
@@ -85,29 +85,16 @@
   }
   .container {
     flex-direction: column;
+    justify-content: flex-start;
     height: auto;
     min-height: auto;
 
     &.contact-page,
     &.about-page,
-    &.portfolio-page {
+    &.project-page {
       .text-zone {
         transform: none;
-        width: 50vw;
-      }
-    }
-    &.portfolio-page {
-      .text-zone {
-        width: 100%;
-      }
-
-      h1.page-title {
-        // margin-left: 20px;
-        // margin-top: 20px;
-      }
-      .image-box {
-        height:200px;
-        max-width: calc(50% - 10px);
+        width: 80vw;
       }
     }
   }
