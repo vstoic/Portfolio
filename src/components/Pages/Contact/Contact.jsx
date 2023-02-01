@@ -2,12 +2,12 @@ import './contact.scss';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import { useEffect, useState, useRef } from 'react';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  // const form = useRef();
+  const refForm = useRef();
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,25 +15,26 @@ const Contact = () => {
     },3000)
   }, [])
 
-    // const sendEmail = (e) => {
-    //   e.preventDefault();
+    const sendEmail = (e) => {
+      e.preventDefault();
 
-    //   emailjs
-    //     .sendForm(
-    //       'gmail',
-    //       'YOUR_TEMPLATE_ID',
-    //       refForm.current,
-    //       'YOUR_PUBLIC_KEY'
-    //     )
-    //     .then(
-    //       () => {
-    //         alert('Message Sent, I will get back to you shortly');
-    //       },
-    //       () => {
-    //         alert(result.text);
-    //       }
-    //     );
-    // };
+      emailjs
+        .sendForm(
+          'service_n5dd71q',
+          'template_2aonywd',
+          refForm.current,
+          'TfTl1I5s2gpIaO56R'
+        )
+        .then(
+          () => {
+            alert('Message Sent, I will get back to you shortly');
+            window.location.reload(false);
+          },
+          () => {
+            alert('Message failed to send.');
+          }
+        );
+    };
 
   return (
     <>
@@ -53,7 +54,7 @@ const Contact = () => {
             bring his skills and passion to your organization.
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input type="text" name="name" placeholder="Name" required />
@@ -69,8 +70,8 @@ const Contact = () => {
                 </li>
                 <li>
                   <input
-                    type="email"
-                    name="email"
+                    type="text"
+                    name="subject"
                     placeholder="Subject"
                     required
                   />
@@ -86,7 +87,7 @@ const Contact = () => {
                   <input
                     type="submit"
                     className="flat-button"
-                    value="Send Message"
+                    value="Send"
                   />
                   <FontAwesomeIcon icon="fa-solid fa-check" />
                 </li>
