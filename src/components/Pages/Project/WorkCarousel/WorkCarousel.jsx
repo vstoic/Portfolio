@@ -1,18 +1,41 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import './workCarousel.scss';
-
-// import required modules
 import { EffectCoverflow, Pagination } from 'swiper';
+//imports for modal
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '1px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 export default function WorkCarousel() {
+  const [open1, setOpen1] = React.useState(false);
+  const handleOpen1 = () => setOpen1(true);
+  const handleClose1 = () => setOpen1(false);
+
+  const [open2, setOpen2] = React.useState(false);
+  const handleOpen2 = () => setOpen2(true);
+  const handleClose2 = () => setOpen2(false);
+
+  const [open3, setOpen3] = React.useState(false);
+  const handleOpen3 = () => setOpen3(true);
+  const handleClose3 = () => setOpen3(false);
+
   return (
     <>
       <Swiper
@@ -32,15 +55,75 @@ export default function WorkCarousel() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="/felp-thumbnail.gif" alt="loading..." />
-          <p>hello</p>
+          <img
+            src="/felp-thumbnail.gif"
+            alt="loading..."
+            onClick={handleOpen1}
+          />
+          {/* <p>hello</p> */}
         </SwiperSlide>
+        <Modal
+          open={open1}
+          onClose={handleClose1}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              Felp
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              A fullstack, single-page web application inspired by Yelp.
+            </Typography>
+          </Box>
+        </Modal>
         <SwiperSlide>
-          <img src="/timerfighter-thumbnail.gif" alt="loading..." />
+          <img
+            src="/timerfighter-thumbnail.gif"
+            alt="loading..."
+            onClick={handleOpen2}
+          />
         </SwiperSlide>
+        <Modal
+          open={open2}
+          onClose={handleClose2}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              Timer Fighter
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              A 2D platform game built with vanilla JavaScript, challenging
+              players to defeat as many enemies as possible within a set time
+              limit.
+            </Typography>
+          </Box>
+        </Modal>
         <SwiperSlide>
-          <img src="/crawl-thumbnail.gif" alt="loading..." />
+          <img
+            src="/crawl-thumbnail.gif"
+            alt="loading..."
+            onClick={handleOpen3}
+          />
         </SwiperSlide>
+        <Modal
+          open={open3}
+          onClose={handleClose3}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              Crawl
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              A full-stack website, users create venues and crawls (groups of
+              venues) with a voting system inspired by Reddit's upvote system.
+            </Typography>
+          </Box>
+        </Modal>
       </Swiper>
     </>
   );
