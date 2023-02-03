@@ -8,8 +8,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import MobileSideBar from './MobileSideBar';
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -59,16 +58,6 @@ const Sidebar = () => {
             <EmailOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
           </NavLink>
         </nav>
-        {showSidebar && (
-          <FontAwesomeIcon
-            onClick={() => setShowSidebar(false)}
-            icon={faClose}
-            size="4x"
-            color="#4d4d4e"
-            cursor="pointer"
-            className="close-icon"
-          />
-        )}
       </div>
       <ul>
         <li>
@@ -87,14 +76,7 @@ const Sidebar = () => {
         </li>
       </ul>
 
-      <FontAwesomeIcon
-        onClick={() => setShowSidebar(true)}
-        icon={faBars}
-        color="#4d4d4e"
-        size="4x"
-        cursor="pointer"
-        className="menu-icon"
-      />
+      <MobileSideBar/>
     </div>
   );
 };
