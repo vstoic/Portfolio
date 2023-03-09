@@ -1,4 +1,5 @@
 import './about.scss';
+import Sing_Cheng_Resume from '../../../assets/Sing_Cheng_Resume.pdf';
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import Carousel from './Corousel/Carousel';
 import { useEffect, useState } from 'react';
@@ -56,7 +57,8 @@ const About = () => {
 
           <div className="carousel-container">
             <a
-              href="https://docs.google.com/document/d/1yDfeAMSyqx7muGjSVbulZClK0JP9gR3ZTr7VOHfxUmY/edit?usp=sharing"
+              href={Sing_Cheng_Resume}
+              download="Sing_Cheng_Resume"
               className="flat-button"
             >
               Resume
