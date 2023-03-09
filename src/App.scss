@@ -24,6 +24,10 @@ html {
   max-width: 100%;
 }
 
+body {
+  margin: 0;
+}
+
 input,
 textarea {
   font-family: 'helvetica';
@@ -41,4 +45,10 @@ textarea {
   height: 100px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1200px) {
+  .loader-active {
+    left: 25%;
+  }
 }

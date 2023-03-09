@@ -45,7 +45,7 @@ const About = () => {
             interests in photography/design, trying new resturants, and
             discovering new music. He is also an adrenaline junkie who enjoys
             physical activities such as olympic weightlifting, hiking,
-            bouldering, basketball and pushing to prod on a friday night.
+            bouldering, basketball.
           </p>
           <p>
             Victor is always open to new opportunities and collaborations in the

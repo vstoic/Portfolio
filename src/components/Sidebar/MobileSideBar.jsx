@@ -1,4 +1,4 @@
-import './mobileSideBar.scss';
+// import './mobileSideBar.scss';
 import { useState, Fragment } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -34,14 +34,10 @@ export default function TemporaryDrawer() {
 
   const list = (anchor) => (
     <Box
-      // sx={{ width: anchor === 'top' || anchor === 'bottom' ? 100 : 10 }}
-      // sx={{ width: 250 }}
-      container
       spacing={0}
       direction="column"
       alignItems="center"
       justifyContent="center"
-      // role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
@@ -156,7 +152,7 @@ export default function TemporaryDrawer() {
             onClick={toggleDrawer(anchor, true)}
             icon={faBars}
             color="#4d4d4e"
-            size="4x"
+            size="3x"
             cursor="pointer"
             className="menu-icon"
           />

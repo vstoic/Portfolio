@@ -1,20 +1,24 @@
-.page {
-  width: 99%;
-  height: 98%;
+.App {
   display: flex;
+  flex-direction: row;
+}
 
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
   // position: absolute;
 }
 
 .container {
-  width: 99%;
+  width: 100%;
   height: 98vh;
   opacity: 0;
   z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-left: 3vw;
+  // margin-left: 3vw;
   align-items: center;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
@@ -80,8 +84,12 @@
 
 
 @media screen and (max-width: 1200px){
+  .App {
+    flex-direction: column;
+  }
   .page {
     display: flex;
+    flex-direction: column;
   }
   .container {
     flex-direction: column;
@@ -94,7 +102,7 @@
     &.project-page {
       .text-zone {
         transform: none;
-        width: 80vw;
+        width: 100vw;
       }
     }
   }

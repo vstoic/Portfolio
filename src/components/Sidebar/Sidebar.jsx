@@ -1,6 +1,5 @@
 import './Sidebar.scss';
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
@@ -11,72 +10,50 @@ import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import MobileSideBar from './MobileSideBar';
 
 const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const hideSidebar = false;
 
   return (
     <div className="nav-bar">
-      <Link className="logo" to="/" onClick={() => setShowSidebar(false)}>
-        <img onClick={() => setShowSidebar(false)} src={Logo} alt="logo" />
-      </Link>
-      <div className={showSidebar ? 'mobile-show' : ''}>
-        <nav>
-          <NavLink
-            onClick={() => setShowSidebar(false)}
-            exact="true"
-            activeclassname="active"
-            to="/"
-          >
-            <HomeOutlinedIcon
-              sx={{
-                fontSize: 32,
-                color: '#4d4d4e',
-              }}
-            />
-          </NavLink>
-          <NavLink
-            onClick={() => setShowSidebar(false)}
-            exact="true"
-            activeclassname="about-link"
-            to="/about"
-          >
-            <PermIdentityIcon sx={{ fontSize: 34, color: '#4d4d4e' }} />
-          </NavLink>
-          <NavLink
-            onClick={() => setShowSidebar(false)}
-            exact="true"
-            activeclassname="project-link"
-            to="/project"
-          >
-            <AccountTreeOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
-          </NavLink>
-          <NavLink
-            onClick={() => setShowSidebar(false)}
-            exact="true"
-            activeclassname="contact-link"
-            to="/contact"
-          >
-            <EmailOutlinedIcon sx={{ fontSize: 32, color: '#4d4d4e' }} />
-          </NavLink>
-        </nav>
+      <div className="mobile-container">
+        <Link className="logo" to="/">
+          <img src={Logo} alt="logo" />
+        </Link>
+        <MobileSideBar />
       </div>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/victorcheng3/"
-          >
-            <GitHubIcon sx={{ fontSize: 22, color: '#4d4d4e' }} />
-          </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noreferrer" href="https://github.com/vstoic">
-            <LinkedInIcon sx={{ fontSize: 22, color: '#4d4d4e' }} />
-          </a>
-        </li>
-      </ul>
 
-      <MobileSideBar/>
+      <div className={hideSidebar ? 'mobile-show' : 'normal-sidebar'}>
+        <div className="nav-middle">
+          <Link exact="true" className="home-link" to="/">
+            <HomeOutlinedIcon sx={{ fontSize: 38, color: '#4d4d4e' }} />
+            <p className="home-text">Home</p>
+          </Link>
+          <Link exact="true" className="about-link" to="/about">
+            <PermIdentityIcon sx={{ fontSize: 40, color: '#4d4d4e' }} />
+            <p>About</p>
+          </Link>
+          <Link exact="true" className="project-link" to="/project">
+            <AccountTreeOutlinedIcon sx={{ fontSize: 37, color: '#4d4d4e' }} />
+            <p>Projects</p>
+          </Link>
+          <Link exact="true" className="contact-link" to="/contact">
+            <EmailOutlinedIcon sx={{ fontSize: 37, color: '#4d4d4e' }} />
+            <p>Contact</p>
+          </Link>
+        </div>
+      </div>
+
+      <div className="contact-links">
+        <a target="_blank" rel="noreferrer" href="https://github.com/vstoic">
+          <GitHubIcon sx={{ fontSize: 23, color: '#4d4d4e' }} />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/victorcheng3/"
+        >
+          <LinkedInIcon sx={{ fontSize: 23, color: '#4d4d4e' }} />
+        </a>
+      </div>
     </div>
   );
 };
