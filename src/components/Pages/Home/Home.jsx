@@ -26,7 +26,7 @@ const Home = () => {
     <>
       <div className="container home-page">
         <div className="text-zone">
-          <h1>
+          <h1 className='home-title'>
             <span className={letterClass}>H</span>
             <span className={`${letterClass} _12`}>i,</span>
             <br />
@@ -63,7 +63,7 @@ const Home = () => {
           <img src={Logo} alt="logo" className="solid-logo" />
         </div>
       </div>
-      <Loader type="ball-clip-rotate-multiple" />
+      {/* <Loader type="ball-clip-rotate-multiple" /> */}
       {/* <Canvas /> */}
     </>
   );

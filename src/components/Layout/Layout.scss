@@ -11,38 +11,54 @@
 }
 
 .container {
-  width: 100%;
-  height: 98vh;
-  opacity: 0;
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  // margin-left: 3vw;
-  align-items: center;
+  justify-content: space-between;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
-}
 
-.container.project-page {
-  align-items: flex-start;
-  .project-content {
+  &.home-page {
     display: flex;
-    flex-direction: column;
-    // align-items: center;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 170px;
   }
-}
 
+  &.project-page {
+    align-items: flex-start;
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &.contact-page,
+  &.about-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    height: 100vh;
+    width: 100%;
+    .text-zone {
+      flex-direction: column;
+      width: 40%;
+    }
 
-.container.contact-page,
-.container.about-page {
-  h1 {
-      font-size: 57px;
+    .text-animate-hover {
+      &:hover {
+        color: #b0b0b0;
+      }
+    }
+
+    h1 {
+      font-size: 65px;
       font-family: helvetica;
       color: #4d4d4e;
       font-weight: 100;
-      position: relative;
     }
 
     p {
@@ -63,27 +79,10 @@
         animation-delay: 1.3s;
       }
     }
-
-    .text-zone {
-      width: 40vw;
-    // position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
-    // width: 35%;
-    // vertical-align: middle;
-    // display: table-cell;
-    // max-height: 90%;
-  }
-
-  .text-animate-hover {
-    &:hover {
-      color: #b0b0b0;
-    }
   }
 }
 
-
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .App {
     flex-direction: column;
   }
@@ -97,15 +96,27 @@
     height: auto;
     min-height: auto;
 
+    &.home-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 95vh;
+      gap: 0;
+    }
     &.contact-page,
     &.about-page,
     &.project-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 0;
       .text-zone {
         transform: none;
-        width: 100vw;
+        width: 100%;
+        padding: 40px;
       }
     }
   }
 }
-
-

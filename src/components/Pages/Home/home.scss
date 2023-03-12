@@ -1,54 +1,26 @@
 .home-page {
   .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  h1 {
+  .home-title {
     color: #4d4d4e;
-    font-size: 53px;
-    line-height: 53px;
+    font-size: 68px;
+    line-height: 63px;
     font-weight: 300;
-    padding-left: 8%;
-    padding-top: 90px;
     font-family: Arial, Helvetica, sans-serif;
-
-    &::before {
-      content: '';
-      font-family: helvetica;
-      color: #4d4d4e;
-      font-size: 18px;
-      font-weight: 100;
-      position: absolute;
-      margin-top: -40px;
-      left: -15px;
-      opacity: 0.6;
-    }
-    &::after {
-      content: '';
-      font-family: helvetica;
-      color: #4d4d4e;
-      font-size: 18px;
-      font-weight: 100;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      animation: fadeIn 1s 1.7s backwards;
-      opacity: 0.6;
-    }
+    margin: 0px;
+    padding-bottom: 15px;
   }
   h2 {
     color: #006adf;
-    margin-top: 15px;
     font-weight: 100;
     font-size: 14px;
     padding-left: 8%;
-
     font-family: helvetica;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     animation: fadeIn 1s 1.8s backwards;
   }
 
@@ -75,19 +47,15 @@
 
   .logo-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 0;
     width: 600px;
     height: 600px;
-    position: absolute;
-    top: 0;
-    right: 15%;
-    bottom: 0;
-    left: auto;
-    margin: auto;
 
     .solid-logo {
+      z-index: 0;
+      width: 100%;
+      height: auto;
+      animation: pulse 1.5s;
     }
   }
 
@@ -95,21 +63,36 @@
     .tags,
     h1:before,
     h1:after {
-      display: none;
+      // display: none;
     }
     .logo-container {
-      display: none;
+      margin-top: -75px;
+      width: 300px;
+      height: 300px;
+      .solid-logo {
+        width: 100%;
+        height: auto;
+      }
     }
 
     .text-zone {
-      position: initial;
-      width: 100%;
-      transform: none;
-      padding: 10px;
-      box-sizing: border-box;
-      z-index: 2;
+      // display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 30px;
+      padding: 40px;
     }
-
+    .home-title {
+      color: #4d4d4e;
+      font-size: 38px;
+      line-height: 38px;
+      font-weight: 300;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h2 {
+      margin-top: none;
+    }
     .flat-button {
       float: none;
       display: block;

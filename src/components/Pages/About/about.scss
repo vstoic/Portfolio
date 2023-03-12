@@ -1,8 +1,7 @@
 .about-image {
   width: auto;
-  height: 70%;
+  height: 750px;
   opacity: 1;
-  // border-bottom: 2px solid #4d4d4e;
   z-index: 1;
   &:hover {
     transition: all 0.5s ease-in-out;
@@ -51,6 +50,7 @@
     height: 60vh;
     opacity: 1;
     z-index: 1;
+    padding: none;
     &:hover {
       transition: all 0.5s ease-in-out;
       transform: scale(1);
