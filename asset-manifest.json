@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.221f4575.css",
-    "main.js": "/static/js/main.05d2a135.js",
+    "main.css": "/static/css/main.141488c7.css",
+    "main.js": "/static/js/main.3f6fddd0.js",
     "static/js/787.2a37d31a.chunk.js": "/static/js/787.2a37d31a.chunk.js",
     "static/media/Sing_Cheng_Resume.pdf": "/static/media/Sing_Cheng_Resume.c020e4f7fcecc120c48f.pdf",
     "static/media/logo.png": "/static/media/logo.9f99234a4f6768d38d7f.png",
@@ -9,12 +9,12 @@
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
-    "main.221f4575.css.map": "/static/css/main.221f4575.css.map",
-    "main.05d2a135.js.map": "/static/js/main.05d2a135.js.map",
+    "main.141488c7.css.map": "/static/css/main.141488c7.css.map",
+    "main.3f6fddd0.js.map": "/static/js/main.3f6fddd0.js.map",
     "787.2a37d31a.chunk.js.map": "/static/js/787.2a37d31a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.221f4575.css",
-    "static/js/main.05d2a135.js"
+    "static/css/main.141488c7.css",
+    "static/js/main.3f6fddd0.js"
   ]
 }
