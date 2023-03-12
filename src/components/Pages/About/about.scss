@@ -21,24 +21,47 @@
   // width: 100vw;
   // height: 4vh;
 }
-.flat-button {
-  color: #4d4d4e;
-  font-size: 14px;
-  font-weight: 100;
-  letter-spacing: 4px;
-  font-family: helvetica;
-  text-decoration: none;
-  padding: 10px 8px;
-  border-radius: 8px;
-  border: 1px solid #c1c1c1;
-  margin-bottom: 25px;
-  animation: fadeIn 1s 1.8s backwards;
+.about-links {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: row;
+  height: auto;
+  padding-bottom: 20px;
+  gap: 10px;
+  .link {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    animation: fadeIn 1s 1.8s backwards;
+    &:hover {
+      transform: scale(1.2);
+      transition: all .2s ease-in-out;
+      // animation: 
+    }
+  }
 
-  &:hover {
-    background-color: #4d4d4e;
-    color: #fff;
+  .flat-button {
+    color: #4d4d4e;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 4px;
+    font-family: helvetica;
+    text-decoration: none;
+    padding: 10px 8px;
+    border-radius: 8px;
+    border: 1px solid #c1c1c1;
+    // margin-bottom: 25px;
+    animation: fadeIn 1s 1.8s backwards;
+  
+    &:hover {
+      background-color: #4d4d4e;
+      color: #fff;
+    }
   }
 }
+
 
 @media screen and (max-width: 1200px) {
   .about-title {

@@ -4,6 +4,8 @@ import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import Carousel from './Corousel/Carousel';
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -56,13 +58,31 @@ const About = () => {
           </p>
 
           <div className="carousel-container">
-            <a
-              href={Sing_Cheng_Resume}
-              download="Sing_Cheng_Resume"
-              className="flat-button"
-            >
-              Resume
-            </a>
+            <div className="about-links">
+              <a
+                className='link'
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/vstoic"
+              >
+                <GitHubIcon sx={{ fontSize: 30, color: '#171515'}} />
+              </a>
+              <a
+                className='link'
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/victorcheng3/"
+              >
+                <LinkedInIcon sx={{ fontSize: 35, color: '#0077B5' }} />
+              </a>
+              <a
+                href={Sing_Cheng_Resume}
+                download="Sing_Cheng_Resume"
+                className="flat-button"
+              >
+                Resume
+              </a>
+            </div>
             <Carousel />
           </div>
         </div>
