@@ -1,5 +1,5 @@
 import './Sidebar.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
@@ -23,22 +23,22 @@ const Sidebar = () => {
 
       <div className={hideSidebar ? 'mobile-show' : 'normal-sidebar'}>
         <div className="nav-middle">
-          <Link exact="true" className="home-link" to="/">
+          <NavLink exact="true" activeClassName="home-link active" to="/">
             <HomeOutlinedIcon sx={{ fontSize: 38, color: '#4d4d4e' }} />
             <p className="home-text">Home</p>
-          </Link>
-          <Link exact="true" className="about-link" to="/about">
+          </NavLink>
+          <NavLink exact="true" activeClassName="about-link active" to="/about">
             <PermIdentityIcon sx={{ fontSize: 40, color: '#4d4d4e' }} />
             <p>About</p>
-          </Link>
-          <Link exact="true" className="project-link" to="/project">
+          </NavLink>
+          <NavLink exact="true" activeClassName="project-link active" to="/project">
             <AccountTreeOutlinedIcon sx={{ fontSize: 37, color: '#4d4d4e' }} />
             <p>Projects</p>
-          </Link>
-          <Link exact="true" className="contact-link" to="/contact">
+          </NavLink>
+          <NavLink exact="true" activeClassName="contact-link active" to="/contact">
             <EmailOutlinedIcon sx={{ fontSize: 37, color: '#4d4d4e' }} />
             <p>Contact</p>
-          </Link>
+          </NavLink>
         </div>
       </div>
 

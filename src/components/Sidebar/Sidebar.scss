@@ -26,27 +26,23 @@
     align-items: center;
     justify-content: space-between;
     height: 367px;
-
-    .home-link,
-    .about-link,
-    .project-link,
-    .contact-link {
+    .active svg{
+      color: #ffffff;
+      border-radius: 25%;
+      padding: 5px;
+      background-color: #4d4d4e;
+       -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-out;
+  }
+    a {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
       text-decoration: none;
-
-      &:active {
-        a {
-          color: #ffffff;
-          border-radius: 30%;
-          padding: 2px;
-          background-color: #4d4d4e;
-        }
-      }
-
+      
+      
       &:hover {
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-out;
@@ -79,6 +75,7 @@
       }
     }
   }
+  
 
   .contact-links {
     width: 100%;
