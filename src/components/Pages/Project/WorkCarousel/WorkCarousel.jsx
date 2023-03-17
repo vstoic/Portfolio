@@ -1,4 +1,7 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import LinkIcon from '@mui/icons-material/Link';
+import GitHubIcon from '@mui/icons-material/GitHub';
 // Import Swiper styles
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -10,6 +13,7 @@ import { EffectCoverflow, Pagination } from 'swiper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { border, margin } from '@mui/system';
 
 const style = {
   position: 'absolute',
@@ -51,6 +55,7 @@ export default function WorkCarousel() {
           slideShadows: true,
         }}
         pagination={true}
+        border="none"
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
@@ -60,9 +65,28 @@ export default function WorkCarousel() {
             alt="loading..."
             onClick={handleOpen1}
           />
-          {/* <p>hello</p> */}
+          <div className="carousel-text">
+            <h1>Felp</h1>
+            <div className="carousel-links">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://felpp.herokuapp.com/#/"
+              >
+                <LinkIcon sx={{ fontSize: 28, color: '#4d4d4e9f' }} />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/vstoic/Felp"
+              >
+                <GitHubIcon sx={{ fontSize: 22, color: '#4d4d4e9f' }} />
+              </a>
+            </div>
+            <p>A fullstack, single-page web application inspired by Yelp</p>
+          </div>
         </SwiperSlide>
-        <Modal
+        {/* <Modal
           open={open1}
           onClose={handleClose1}
           aria-labelledby="modal-modal-title"
@@ -76,15 +100,38 @@ export default function WorkCarousel() {
               A fullstack, single-page web application inspired by Yelp.
             </Typography>
           </Box>
-        </Modal>
+        </Modal> */}
         <SwiperSlide>
           <img
             src="/timerfighter-thumbnail.gif"
             alt="loading..."
             onClick={handleOpen2}
           />
+          <div className="carousel-text">
+            <h1>Timer Fighter</h1>
+            <div className="carousel-links">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://vstoic.github.io/TimerFighter/"
+              >
+                <LinkIcon sx={{ fontSize: 28, color: '#4d4d4e9f' }} />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/vstoic/TimerFighter"
+              >
+                <GitHubIcon sx={{ fontSize: 22, color: '#4d4d4e9f' }} />
+              </a>
+            </div>
+            <p>
+              A 2D platform game challenging players to defeat as many enemies
+              as possible within a set time limit.
+            </p>
+          </div>
         </SwiperSlide>
-        <Modal
+        {/* <Modal
           open={open2}
           onClose={handleClose2}
           aria-labelledby="modal-modal-title"
@@ -100,15 +147,38 @@ export default function WorkCarousel() {
               limit.
             </Typography>
           </Box>
-        </Modal>
+        </Modal> */}
         <SwiperSlide>
           <img
             src="/crawl-thumbnail.gif"
             alt="loading..."
             onClick={handleOpen3}
           />
+          <div className="carousel-text">
+            <h1>Crawl</h1>
+            <div className="carousel-links">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://socialcrawl.herokuapp.com/#/"
+              >
+                <LinkIcon sx={{ fontSize: 28, color: '#4d4d4e9f' }} />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/vstoic/crawl"
+              >
+                <GitHubIcon sx={{ fontSize: 22, color: '#4d4d4e9f' }} />
+              </a>
+            </div>
+            <p>
+              A full-stack website, users create venues and crawls (groups of
+              venues) with a voting system inspired by Reddit's upvote system
+            </p>
+          </div>
         </SwiperSlide>
-        <Modal
+        {/* <Modal
           open={open3}
           onClose={handleClose3}
           aria-labelledby="modal-modal-title"
@@ -123,7 +193,7 @@ export default function WorkCarousel() {
               venues) with a voting system inspired by Reddit's upvote system.
             </Typography>
           </Box>
-        </Modal>
+        </Modal> */}
       </Swiper>
     </>
   );
