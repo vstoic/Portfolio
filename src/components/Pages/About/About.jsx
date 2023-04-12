@@ -19,9 +19,6 @@ const About = () => {
   return (
     <>
       <div className="container about-page">
-        {/* <div className="profile-picture"> */}
-        {/* <img src="/AboutImageFixed.png" alt="" className="about-image2" /> */}
-        {/* </div> */}
         <div className="text-zone">
           <h1 className="about-title">
             <AnimatedLetters

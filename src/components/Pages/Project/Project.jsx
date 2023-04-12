@@ -24,9 +24,6 @@ const Project = () => {
             />
           </h1>
           <WorkCarousel />
-          {/* <Alert icon={false} color="info">
-            Drag to scroll
-          </Alert> */}
         </div>
       </div>
       <Loader type="ball-clip-rotate-multiple" />
