@@ -4,43 +4,12 @@ import React from 'react';
 // import 'swiper/css';
 // import 'swiper/css/pagination';
 // import 'swiper/css/navigation';
-import './carousel.scss';
+import './SkillCard.scss';
 import { js, react, html, css, sass, aws, gmaps, git, jquery, node, express, mongodb, heroku, npm, postgres, rails, redux, ruby, sql, tailwind, webpack } from './index.jsx';
 
-export default function Carousel() {
+export default function SkillCard() {
   return (
     <>
-      {/* <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        slidesPerGroup={5}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        // className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src={js} alt="" className="icon-img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={html} alt="" className="icon-img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={css} alt="" className="icon-img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={react} alt="" className="icon-img" />
-        </SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-      </Swiper> */}
-
       <div className="about-grid-container">
           <img src={react} alt="" className="icon-img" />
           <img src={js} alt="" className="icon-img" />

@@ -35,16 +35,15 @@ textarea {
 
 .loader-active {
   display: block;
-  pointer-events: none; 
+  pointer-events: none;
   position: absolute;
- // left: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-  animation: fadeOut .7s .7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: fadeOut 0.7s 0.7s;
   animation-fill-mode: forwards;
   z-index: 1;
 }

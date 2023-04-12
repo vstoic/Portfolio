@@ -1,7 +1,7 @@
 import './about.scss';
 import Sing_Cheng_Resume from '../../../assets/Sing_Cheng_Resume.pdf';
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
-import Carousel from './Corousel/Carousel';
+import SkillCard from './SkillsCards/SkillCard';
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -83,7 +83,7 @@ const About = () => {
                 Resume
               </a>
             </div>
-            <Carousel />
+            <SkillCard />
           </div>
         </div>
 
