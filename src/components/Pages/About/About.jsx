@@ -72,13 +72,13 @@ const About = () => {
               >
                 <LinkedInIcon sx={{ fontSize: 35, color: '#0077B5' }} />
               </a>
-              <a
+              {/* <a
                 href={Sing_Cheng_Resume}
                 download="Sing_Cheng_Resume"
                 className="flat-button"
               >
                 Resume
-              </a>
+              </a> */}
             </div>
             <SkillCard />
           </div>
