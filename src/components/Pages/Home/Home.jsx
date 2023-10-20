@@ -63,7 +63,7 @@ const Home = () => {
           <img src={Logo} alt="logo" className="solid-logo" />
         </div>
       </div>
-      {/* <Loader type="ball-clip-rotate-multiple" /> */}
+      <Loader type="ball-clip-rotate-multiple" />
       {/* <Canvas /> */}
     </>
   );

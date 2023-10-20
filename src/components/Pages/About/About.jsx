@@ -45,7 +45,7 @@ const About = () => {
             interests in photography/design, trying new resturants, and
             discovering new music. He is also an adrenaline junkie who enjoys
             physical activities such as olympic weightlifting, hiking,
-            bouldering, basketball.
+            bouldering and basketball.
           </p>
           <p>
             Victor is always open to new opportunities and collaborations in the
@@ -83,10 +83,9 @@ const About = () => {
             <SkillCard />
           </div>
         </div>
-
-        <img src="/AboutImageFixed.png" alt="" className="about-image" />
+        {/* <img src="/AboutImageFixed.png" alt="" className="about-image" /> */}
       </div>
-      <Loader type="ball-clip-rotate-multiple" />
+      <Loader active={true} type="ball-clip-rotate-multiple" />
     </>
   );
 };

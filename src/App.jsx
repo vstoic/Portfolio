@@ -9,7 +9,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 // import Loader from 'react-loaders'
 
 function App() {
-
   return (
     <>
         <Routes>

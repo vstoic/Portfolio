@@ -23,19 +23,19 @@ const Sidebar = () => {
 
       <div className={hideSidebar ? 'mobile-show' : 'normal-sidebar'}>
         <div className="nav-middle">
-          <NavLink exact="true" activeClassName="home-link active" to="/">
+          <NavLink exact="true" activeclassname="home-link active" to="/">
             <HomeOutlinedIcon sx={{ fontSize: 38, color: '#4d4d4e' }} />
             <p className="home-text">Home</p>
           </NavLink>
-          <NavLink exact="true" activeClassName="about-link active" to="/about">
+          <NavLink exact="true" activeclassname="about-link active" to="/about">
             <PermIdentityIcon sx={{ fontSize: 40, color: '#4d4d4e' }} />
             <p>About</p>
           </NavLink>
-          <NavLink exact="true" activeClassName="project-link active" to="/project">
+          <NavLink exact="true" activeclassname="project-link active" to="/project">
             <AccountTreeOutlinedIcon sx={{ fontSize: 37, color: '#4d4d4e' }} />
             <p>Projects</p>
           </NavLink>
-          <NavLink exact="true" activeClassName="contact-link active" to="/contact">
+          <NavLink exact="true" activeclassname="contact-link active" to="/contact">
             <EmailOutlinedIcon sx={{ fontSize: 37, color: '#4d4d4e' }} />
             <p>Contact</p>
           </NavLink>
