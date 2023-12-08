@@ -1,52 +1,52 @@
-@import 'animate.css';
-// @import '~loader.css/src/animations/pacman.scss';
-@import '~loaders.css/src/animations/ball-clip-rotate-multiple.scss';
+// @import 'animate.css';
+// // @import '~loader.css/src/animations/pacman.scss';
+// @import '~loaders.css/src/animations/ball-clip-rotate-multiple.scss';
 
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
-}
+// @font-face {
+//   font-family: 'Helvetica Neue';
+//   src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
+// }
 
-@font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore.woff2') format('ttf');
-}
-@font-face {
-  font-family: 'Coolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('ttf');
-}
+// @font-face {
+//   font-family: 'La Belle Aurore';
+//   src: url('./assets/fonts/LaBelleAurore.woff2') format('ttf');
+// }
+// @font-face {
+//   font-family: 'Coolvetica';
+//   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('ttf');
+// }
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 html {
   max-width: 100%;
 }
 
-body {
-  margin: 0;
-}
+// body {
+//   margin: 0;
+// }
 
-input,
-textarea {
-  font-family: 'helvetica';
-}
+// input,
+// textarea {
+//   font-family: 'helvetica';
+// }
 
-.loader-active {
-  display: block;
-  pointer-events: none;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  animation: fadeOut 0.7s 0.7s;
-  animation-fill-mode: forwards;
-  z-index: 1;
-}
+// .loader-active {
+//   display: block;
+//   pointer-events: none;
+//   position: absolute;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   height: 100%;
+//   background-color: white;
+//   animation: fadeOut 0.7s 0.7s;
+//   animation-fill-mode: forwards;
+//   z-index: 1;
+// }
 
-@media screen and (max-width: 1200px) {
-}
+// @media screen and (max-width: 1200px) {
+// }

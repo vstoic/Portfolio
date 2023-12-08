@@ -4,20 +4,15 @@ import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import { useEffect, useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Footer from '../../Footer/Footer';
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
   const refForm = useRef();
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    },3000)
-  }, [])
-
+    useEffect(() => {
+      console.log('Contact component rendered');
+    });
     const sendEmail = (e) => {
       e.preventDefault();
-
       emailjs
         .sendForm(
           'service_n5dd71q',
@@ -40,19 +35,8 @@ const Contact = () => {
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              strArray={'Contact Me'.split('')}
-              letterClass={letterClass}
-              idx={15}
-            />
-          </h1>
-          <p>
-            Victor is always open to new opportunities and collaborations in the
-            field of software engineering and technology. He welcomes anyone to
-            reach out to him for potential projects or to discuss how he can
-            bring his skills and passion to your organization.
-          </p>
+          <h1>{Math.random()}</h1>
+          <h1 className="email-title">Email Me!</h1>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
               <ul>
@@ -84,11 +68,7 @@ const Contact = () => {
                   ></textarea>
                 </li>
                 <li>
-                  <input
-                    type="submit"
-                    className="flat-button"
-                    value="Send"
-                  />
+                  <input type="submit" className="flat-button" value="Send" />
                   <FontAwesomeIcon icon="fa-solid fa-check" />
                 </li>
               </ul>
@@ -96,7 +76,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Loader type="ball-clip-rotate-multiple" />
+      <Footer />
+      {/* <Loader type="ball-clip-rotate-multiple" /> */}
     </>
   );
 }

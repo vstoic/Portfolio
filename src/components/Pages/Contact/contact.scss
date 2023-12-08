@@ -66,4 +66,16 @@
     border-radius: 4px;
     border: 1px solid #4d4d4e;
   }
+
+}
+.email-title {
+  font-size: 26px;
+  font-weight:400;
+  margin-bottom: 20px;
+  color: #4d4d4e;
+  font-family: Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  animation: fadeInUp 2s 2s;
+  animation-fill-mode: forwards;
 }
