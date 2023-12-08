@@ -17,7 +17,7 @@ const styles = {
     fontSize: '18px',
     fontFamily: 'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
     // letterSpacing: '1.5px',
-    animation: 'fadeIn 1s 1.8s backwards',
+    animation: 'fadeIn 1s .5s backwards',
   },
   bounceImg: {
     width: '50px',

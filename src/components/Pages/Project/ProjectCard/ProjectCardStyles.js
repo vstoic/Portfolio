@@ -139,6 +139,8 @@ export const styles = {
     width: '100%',
     margin: 0, // Add this to reset margin
     padding: 0, // Add this to reset padding
+    animation: 'fadeIn 1s 0.5s backwards',
+
   },
   textContainer: {
     display: 'flex',

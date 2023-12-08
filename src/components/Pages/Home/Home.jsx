@@ -40,9 +40,9 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <div className="title-container">
-            <img src="/self.JPG" alt="logo" className="pfp" />
-            <h1 className="home-title">
-              <span className={letterClass}>H</span>
+            <img src="/self.jpg" alt="logo" className="pfp" />
+            <div className="title-text-container">
+              {/* <span className={letterClass}>H</span>
               <span className={`${letterClass} _12`}>i, </span>
               <span className={`${letterClass} _12`}> </span>
               <span className={`${letterClass} _13`}>I</span>
@@ -56,22 +56,15 @@ const Home = () => {
                 letterClass={letterClass}
                 strArray={lastName}
                 idx={23}
-              />
-              <br />
-              {/* <AnimatedLetters
-                letterClass={letterClass}
-                strArray={jobArray1}
-                idx={30}
-              />
-              <AnimatedLetters
-                letterClass={letterClass}
-                strArray={jobArray2}
-                idx={39}
               /> */}
+              <h1 className='home-title'> 
+                Hi, I'm Victor Cheng
+              </h1>
+              {/* <br /> */}
               <h2 className='home-title2'> 
                 Frontend Engineer / FullStack Engineer 
               </h2>
-            </h1>
+            </div>
           </div>
           {/* <Link to="/contact" className="flat-button">
             Contact Me
