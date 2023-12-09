@@ -40,7 +40,7 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <div className="title-container">
-            <img src="/self.jpg" alt="logo" className="pfp" />
+            <img src="/self.jpg" className="pfp" />
             <div className="title-text-container">
               {/* <span className={letterClass}>H</span>
               <span className={`${letterClass} _12`}>i, </span>
@@ -75,7 +75,7 @@ const Home = () => {
           <div className='home-grid-container'>
             {workList.map((work, index) => (
               // <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
-              <ProjectCard project={work} />
+              <ProjectCard project={work} key={index}/>
               // </Grid>
             ))}
           </div>
