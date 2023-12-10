@@ -22,10 +22,10 @@ export const StyledLink = styled(Link)`
       transform: scale(1.04);
     }
 
-    @media (max-width: 900px) {
-      font-size: 12px;
+    @media (max-width: 1200px) {
+      font-size: 11px;
       text-align: left;
-      margin: 0px 0 25px 0; /* Adjust margins for mobile */
+      margin: 0px 0 20px 0; /* Adjust margins for mobile */
     }
   }
 `;

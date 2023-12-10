@@ -11,20 +11,21 @@ export default function Footer() {
       sx={{
         //why is this width so weird? it does not adjust to the screen size with 100% so this is hard coded. 
         width: '100%',
-        maxWidth: { xs: '88%', sm: '88%', md: 'none', lg: 'none' }, 
+        maxWidth: { xs: '100%', sm: '100%', md: 'none', lg: 'none' }, 
         // margin: '0 auto', // Centers the footer horizontally
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
         marginTop: '80px',
-        padding: '0 20%',
+        padding: { xs: '0 20px', sm: '0 20px', md: '0 0', lg: '0 0' },
       }}
     >
       <Divider variant="fullWidth" sx={{marginBottom: '20px'}} />
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', sm: 'column', md: 'row', lg: 'row' },
+          width: '100%',
+          flexDirection: { xs: 'column', sm: 'column', md: 'column', lg: 'row' },
           justifyContent: 'space-between',
         }}
       >

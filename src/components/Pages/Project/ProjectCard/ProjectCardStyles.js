@@ -36,7 +36,8 @@ export const LinkText = styled.p`
   0px 3px 5px 0px rgba(0, 0, 0, 0.04);
   
   @media (max-width: 1200px) {
-    
+    height: auto%;
+    width: 100%;
   }
   `;
   
@@ -50,8 +51,10 @@ export const LinkText = styled.p`
     transition: opacity 500ms ease;
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2),
       0px 3px 5px 0px rgba(0, 0, 0, 0.04);
-  
+
     @media (max-width: 1200px) {
+      height: auto%;
+      width: 100%;
       filter: grayscale(0%);
     }
   `;
@@ -82,6 +85,9 @@ export const LinkText = styled.p`
     background-color: white;
     width: 85%;
     height: 85%;
+    min-height: 85%;
+    overflow: scroll;
+
 
     @media (max-width: 900px) {
       overflow: scroll;
@@ -101,6 +107,7 @@ export const ModalImageContainer = styled(Box)`
   background-color: white;
   display: flex;
   align-items: center;
+  padding: 0% 5%;
 
   @media (max-width: 900px) {
     width: 80vw;
