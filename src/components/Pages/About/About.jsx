@@ -26,45 +26,21 @@ const About = () => {
     <>
       <Box className="container about-page">
         <Box className="text-zone">
-          <StyledTitle
-            // variant="h1"
-            // className="about-title"
-            // sx={{ fontSize: '32px', margin: '20px' }}
-          >
-            Swe 👨🏻‍💻 Shutterbug 📷 Film Enthusiast 🎞️ Weightlifter 🏋🏻‍♂️
-            {/* <AnimatedLetters
-              strArray={'Swe, Coffee Addict, Film Enthusiast, food conoisseur, shutterbug, weightlifter '.split('')}
-              letterClass={letterClass}
-              idx={15}
-            />
-            <AnimatedLetters
-              strArray={'Carpe Diem'.split('')}
-              letterClass={letterClass}
-              idx={21}
-            /> */}
-          </StyledTitle>
-          {/* <Typography className="text">
-            Victor is an aspiring full stack software engineer with a diverse
-            background in real estate. He made a career change and attended an
-            app academy bootcamp to acquire the necessary skills and knowledge
-            to excel in the field of software engineering. Victor's passion for
-            technology, coupled with his strong work ethic, will enable him to
-            make valuable contributions to any team.
-          </Typography>
-          <Typography className="text">
-            In his free time, Victor enjoys staying active and exploring his
-            interests in photography/design, trying new resturants, and
-            discovering new music. He is also an adrenaline junkie who enjoys
-            physical activities such as weightlifting, hiking,
-            bouldering and basketball.
-          </Typography>
-          <Typography className="text">
-            Victor is always open to new opportunities and collaborations in the
-            field of software engineering and technology. He welcomes anyone to
-            reach out to him for potential projects or to discuss how he can
-            bring his skills and passion to your organization.
-          </Typography> */}
-
+          <Box sx={{display:'flex', flexDirection: 'column', alignContent: 'flex-end', width: '100%', margin: '25px 0'}}>
+            <StyledTitle>
+              Swe👨🏻‍💻
+            </StyledTitle>
+            <StyledTitle>
+              Shutterbug📷
+            </StyledTitle>
+            <StyledTitle>
+              Film Enthusiast🎞️
+            </StyledTitle>
+            <StyledTitle>
+              Weightlifter🏋🏻‍♂️
+            </StyledTitle>
+            
+          </Box>
           <StyledText>
             I thrive on challenges and constantly seek new adventures, finding
             an unrivaled thrill in building something from the ground up and

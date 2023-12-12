@@ -3,13 +3,16 @@ import styled from 'styled-components';
 export const StyledTitle = styled.div`
   font-family: Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 32px;
-  margin: 35px 0px 25px 0px;
+  font-size: 34px;
+  margin: px 0px 5px 0px;
   color: black;
-  font-weight: 400;
+  font-weight: 100;
+  text-align: right;
+  letter-spacing: 14px;
   @media screen and (max-width: 1200px) {
     font-size: 26px;
-    margin: 15px 0px 15px 0px;
+    letter-spacing: 10px;
+    margin: 0px 0px 6px 0px;
   }
 `;
 
