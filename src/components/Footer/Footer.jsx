@@ -44,7 +44,7 @@ export default function Footer() {
         <StyledLink
           target="_blank"
           rel="noopener noreferrer"
-          href="www.linkedin.com/in/victorcheng3"
+          href="https://www.linkedin.com/in/victorcheng3"
         >
           LinkedIn
         </StyledLink>
