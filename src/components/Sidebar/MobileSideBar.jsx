@@ -110,7 +110,7 @@ export default function TemporaryDrawer() {
           // activeclassname="about-link"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/vstoic"
+          href="https://github.com/vstoic/vstoic.github.io"
           style={{
             textDecoration: 'none',
             width: '100%',
@@ -122,7 +122,6 @@ export default function TemporaryDrawer() {
         </a>
         <a
           exact="true"
-          // activeclassname="about-link"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/victorcheng3/"
@@ -138,7 +137,6 @@ export default function TemporaryDrawer() {
       </Box>
     </Box>
   );
-
   return (
     <div
       style={{

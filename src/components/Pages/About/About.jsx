@@ -1,12 +1,11 @@
-import Sing_Cheng_Resume from '../../../assets/Sing_Cheng_Resume.pdf';
-import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
-import SkillCard from './SkillsCards/SkillCard';
-import { useEffect, useState } from 'react';
-import Loader from 'react-loaders';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
-import { Typography, Box, Link } from '@mui/material';
+// import Sing_Cheng_Resume from '../../../assets/Sing_Cheng_Resume.pdf';
+// import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
+// import SkillCard from './SkillsCards/SkillCard';
+// import { useEffect, useState } from 'react';
+// import Loader from 'react-loaders';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Box } from '@mui/material';
 import { StyledText, StyledTitle } from './AboutStyles';
 
 import MyTimeline from '../../Timeline/Timeline';
@@ -14,14 +13,12 @@ import FloatingArrow from '../../Common/Arrow/Arrow';
 import Footer from '../../Footer/Footer';
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 3000);
-  }, []);
-
+  // const [letterClass, setLetterClass] = useState('text-animate');
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLetterClass('text-animate-hover');
+  //   }, 3000);
+  // }, []);
   return (
     <>
       <Box className="container about-page">
@@ -59,10 +56,8 @@ const About = () => {
             cafe. If you're reading this and thinking, 'Hey, that sounds like
             me,' well, just say hi!
           </StyledText>
-
           <FloatingArrow text={'My Timeline'} />
           <MyTimeline />
-
           {/* <Box className="carousel-container">
             <Box className="about-links">
               <Link

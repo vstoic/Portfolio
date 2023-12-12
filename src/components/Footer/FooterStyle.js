@@ -23,9 +23,10 @@ export const StyledLink = styled(Link)`
     }
 
     @media (max-width: 1200px) {
-      font-size: 11px;
+
+      font-size: 14px;
       text-align: left;
-      margin: 0px 0 20px 0; /* Adjust margins for mobile */
+      margin: 0px 0px 20px 10%; /* Adjust margins for mobile */
     }
   }
 `;

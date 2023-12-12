@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const StyledTitle = styled.div`
 font-size: 18px;
 font-weight: 400;
@@ -10,7 +9,6 @@ color: black;
   font-size: 14px;
 }
 `;
-
 export const StyledCompany = styled.div`
 font-size: 16px;
 font-weight: 400;
@@ -21,7 +19,6 @@ color: black;
   font-size: 12px;
 }
 `;
-
 export const StyledText = styled.div`
   font-size: 16px;
   font-weight: 200;

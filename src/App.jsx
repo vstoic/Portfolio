@@ -1,12 +1,11 @@
-import './App.scss'
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout/Layout'
-import Home from './components/Pages/Home/Home'
-import About from './components/Pages/About/About.jsx'
-import Contact from './components/Pages/Contact/Contact'
-import Project from './components/Pages/Project/Project'
+import './App.scss';
+// import { HashRouter as Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import Home from './components/Pages/Home/Home';
+import About from './components/Pages/About/About.jsx';
+import Project from './components/Pages/Project/Project';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-// import Loader from 'react-loaders'
 
 function App() {
   return (

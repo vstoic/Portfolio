@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid'; // Import Grid component
 import Box from '@mui/material/Box';
@@ -31,7 +30,6 @@ export default function ProjectCard(props) {
   };
 
   //could be removed. but too much work at the moment 
-
   const handleMouseEnter = (e) => {
     e.target.style.opacity = '1';
     e.target.style.filter = 'grayscale(18%)';
@@ -43,14 +41,11 @@ export default function ProjectCard(props) {
   };
 
   const handleMouseEnterWork = (e) => {
-    // e.target.style.opacity = '1';
     e.target.style.transition = 'all 0.1s ease-in-out';
     e.target.style.transform = 'scale(1.02)';
   };
   const handleMouseLeaveWork = (e) => {
     e.target.style.transform = 'scale(1)';
-    // e.target.style.opacity = '.8';
-    // e.target.style.filter = 'none';
   };
 
   return (

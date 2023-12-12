@@ -1,46 +1,34 @@
 // import 'home.scss';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import './home.scss';
-import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
+// import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import { workList } from '../../../assets/content/work';
 import { projectsList } from '../../../assets/content/projects';
 import ProjectCard from '../Project/ProjectCard/ProjectCard';
-import Box from '@mui/material/Box';
 // import MyTimeline from '../../Timeline/Timeline';
 import FloatingArrow from '../../Common/Arrow/Arrow';
 import Footer from '../../Footer/Footer';
 // import Layout from '../../Layout/Layout';
-
-// const styles = {
-//   gridContainer: {
-//     marginTop: '0',
-//     display: 'grid', // Wrap 'grid' in quotes
-//     gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr)',
-//     gridTemplateRows: 'auto',
-//     gap: '1.5em',
-//     // border: '1px solid red',
-//   },
-// };
-
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-  const firstName = ' Victor '.split('');
-  const lastName = 'Cheng'.split('');
+  // const [letterClass, setLetterClass] = useState('text-animate');
+  // const firstName = ' Victor '.split('');
+  // const lastName = 'Cheng'.split('');
   // const jobArray1 = 'Software '.split('');
   // const jobArray2 = 'Engineer.'.split('');
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 9000);
-  }, []);
-
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLetterClass('text-animate-hover');
+  //   }, 9000);
+  // }, []);
+  console.log(
+    'Hi Again, thanks for stopping by! Feel free to reach out to me. My contact info is at the bottom of the page. '
+  );
   return (
     <>
       <div className="container home-page">
         <div className="text-zone">
           <div className="title-container">
-            <img src="/self.jpg" className="pfp" />
+            <img src="/self.jpg" alt='GITHUB ERROR' className="pfp" />
             <div className="title-text-container">
               {/* <span className={letterClass}>H</span>
               <span className={`${letterClass} _12`}>i, </span>
@@ -86,15 +74,12 @@ const Home = () => {
               <ProjectCard project={project} key={index} />
             ))}
           </div>
-          
           <Footer/>
         </div>
-
       </div>
       {/* <Loader type="ball-clip-rotate-multiple" /> */}
       {/* <Canvas /> */}
     </>
   );
 };
-
 export default Home;

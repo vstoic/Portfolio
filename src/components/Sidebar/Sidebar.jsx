@@ -1,5 +1,5 @@
 import './Sidebar.scss';
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import MobileSideBar from './MobileSideBar';
 
 const Sidebar = () => {
