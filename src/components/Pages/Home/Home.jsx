@@ -3,11 +3,13 @@
 import './home.scss';
 // import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters';
 import { workList } from '../../../assets/content/work';
+import { skillsList } from '../../../assets/content/skills';
 import { projectsList } from '../../../assets/content/projects';
 import ProjectCard from '../Project/ProjectCard/ProjectCard';
 // import MyTimeline from '../../Timeline/Timeline';
 import FloatingArrow from '../../Common/Arrow/Arrow';
 import Footer from '../../Footer/Footer';
+import SkillChips from '../../Common/Chips';
 // import Layout from '../../Layout/Layout';
 const Home = () => {
   // const [letterClass, setLetterClass] = useState('text-animate');
@@ -28,7 +30,7 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <div className="title-container">
-            <img src="/self.jpg" alt='GITHUB ERROR' className="pfp" />
+            <img src="/self.jpg" alt="GITHUB ERROR" className="pfp" />
             <div className="title-text-container">
               {/* <span className={letterClass}>H</span>
               <span className={`${letterClass} _12`}>i, </span>
@@ -45,12 +47,10 @@ const Home = () => {
                 strArray={lastName}
                 idx={23}
               /> */}
-              <h1 className='home-title'> 
-                Hi, I'm Victor Cheng
-              </h1>
+              <h1 className="home-title">Hi, I'm Victor Cheng</h1>
               {/* <br /> */}
-              <h2 className='home-title2'> 
-                Frontend Engineer / FullStack Engineer 
+              <h2 className="home-title2">
+                Frontend Engineer / FullStack Engineer
               </h2>
             </div>
           </div>
@@ -58,12 +58,14 @@ const Home = () => {
             Contact Me
           </Link> */}
           {/* <MyTimeline /> */}
+          <FloatingArrow text={'Skills & Tools'} />
+          <SkillChips skills={skillsList}/>
 
           <FloatingArrow text={'Work Experience'} />
-          <div className='home-grid-container'>
+          <div className="home-grid-container">
             {workList.map((work, index) => (
               // <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
-              <ProjectCard project={work} key={index}/>
+              <ProjectCard project={work} key={index} />
               // </Grid>
             ))}
           </div>
@@ -74,7 +76,7 @@ const Home = () => {
               <ProjectCard project={project} key={index} />
             ))}
           </div>
-          <Footer/>
+          <Footer />
         </div>
       </div>
       {/* <Loader type="ball-clip-rotate-multiple" /> */}
