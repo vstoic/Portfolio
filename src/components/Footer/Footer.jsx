@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Divider } from "@mui/material";
 import { StyledLink } from "./FooterStyle";
 import { Link as RouterLink } from 'react-router-dom';
@@ -8,7 +8,6 @@ export default function Footer() {
   return (
     <Box
       sx={{
-        //why is this width so weird? it does not adjust to the screen size with 100% so this is hard coded.
         width: '100%',
         maxWidth: { xs: '100%', sm: '100%', md: 'none', lg: 'none' },
         // margin: '0 auto', // Centers the footer horizontally
@@ -63,19 +62,22 @@ export default function Footer() {
           Instagram
         </StyledLink>
       </Box>
-      {/* <Box>
-        <Typography sx={
-          {
+      <Box>
+        <Typography
+          sx={{
             color: '#4d4d4ec3',
-            fontWeight: '200',
+            fontWeight: '100',
             fontSize: '14px',
+            display: { xs: 'none', sm: 'none', md: 'none', lg: 'block'},
             margin: '10px 30px 55px 0',
             fontFamily: `Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
               Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
             letterSpacing: '1px',
-          }
-        }>2023 • Victor Cheng</Typography>
-      </Box> */}
+          }}
+        >
+          2023 • Built by Victor Cheng
+        </Typography>
+      </Box>
     </Box>
   );
 }

@@ -165,13 +165,13 @@ export default function TemporaryDrawer() {
             <Link component={RouterLink} to="/about" className="nav-links">
               About
             </Link>
-            <Link
+            {/* <Link
               href={Sing_Cheng_Resume}
               download="Sing_Cheng_Resume"
               className="nav-links"
             >
               Resume
-            </Link>
+            </Link> */}
             <DragHandleSharpIcon
               onClick={toggleDrawer(anchor, true)}
               sx={{

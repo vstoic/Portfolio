@@ -1,5 +1,6 @@
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
+import HelpIcon from '@mui/icons-material/Help';
 
 export const careerTimeline = [
   {
@@ -8,8 +9,7 @@ export const careerTimeline = [
     title: 'Software Development Engineer',
     company: 'Cirrus Data Solutions Inc.',
     location: 'Syosset, NY',
-    description:
-      'Leading and supervising a team of developers, effectively assigning and overseeing tasks to achieve project milestones and deliverables in a proactive and collaborative environment. Contributing to the creation and enhancement of documentation for the company, ensuring accurate and up-to-date information, thereby facilitating smoother operations and knowledge sharing. Developing and integrating novel internal web features utilizing React and Typescript, leading to a reduction in production time for the IT department. Managing VMWare test environment for both clients and internal engineers, ensuring seamless operations using Vim and Bash.',
+    description: `Leading a development team, streamlining documentation, developing web features with React and Typescript, and managing a VMWare test environment for efficiency and support.`,
   },
   {
     icon: <WorkIcon />,
@@ -17,8 +17,7 @@ export const careerTimeline = [
     title: 'Software Engineer Intern',
     company: 'Cirrus Data Solutions Inc.',
     location: 'Syosset, NY',
-    description:
-      'Gained hands-on experience in software development. Collaborated with the development team on various projects, contributing to the development and enhancement of internal web features using React and Typescript. Assisted in managing VMWare test environments, optimizing processes for clients and internal engineers.',
+    description: `Gained hands-on experience in software development. Contributed to web projects. Helped manage VMWare test environments for client and engineer efficiency.`,
   },
   {
     icon: <SchoolIcon />,
@@ -45,5 +44,13 @@ export const careerTimeline = [
     company: 'CUNY Baruch College',
     location: 'New York, NY',
     description: 'Major: Corporate Communications',
+  },
+  {
+    icon: <HelpIcon />,
+    time: '💌',
+    title: 'For More Details',
+    company: 'Contact',
+    location: 'Me',
+    description: 'Email me for more details and resume! Thanks for stopping by!',
   },
 ];

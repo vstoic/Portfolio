@@ -5,7 +5,7 @@ import { Link } from '@mui/material';
 export const StyledLink = styled(Link)`
   && {
     text-align: center;
-    margin: 0px 20px 55px 0;
+    margin: 0px 20px 5px 0;
     color: black;
     font-weight: 100;
     font-size: 14px;
