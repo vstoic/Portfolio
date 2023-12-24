@@ -8,6 +8,7 @@ const styles = {
     gap: '10px',
     boxSize: 'border-box',
     margin: '5px 0',
+    animation: 'fadeIn 1s .5s backwards',
   },
 };
 
@@ -26,7 +27,7 @@ const SkillChips = (props) => {
             border: '.5px solid #333',
             fontSize: '14px',
             fontWeight: '200',
-            fontFamily: 'Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif' 
+            fontFamily: 'Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
           }}
         />
       ))}
