@@ -43,6 +43,10 @@
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     margin: 0px;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.03);
+      }
   }
   .home-title2 {
     color: #333;
@@ -52,7 +56,14 @@
     font-family: Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.03);
     }
+    }
+  .about-path {
+    text-decoration: none;
+  }
 
   .flat-button {
     color: #4d4d4e;
@@ -66,12 +77,9 @@
     border-radius: 2px;
     margin: 20px;
     text-align: center;
-    // margin-left: 10%;
     float: left;
     animation: fadeIn 1s 1.8s backwards;
-    // white-space: nowrap;
     z-index: 3;
-
     &:hover {
       background-color: #4d4d4e;
       color: #fff;

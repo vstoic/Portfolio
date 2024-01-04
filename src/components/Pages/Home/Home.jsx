@@ -6,6 +6,8 @@ import { workList } from '../../../assets/content/work';
 import { skillsList } from '../../../assets/content/skills';
 import { projectsList } from '../../../assets/content/projects';
 import ProjectCard from '../Project/ProjectCard/ProjectCard';
+import { Link } from '@mui/material';
+
 // import MyTimeline from '../../Timeline/Timeline';
 import FloatingArrow from '../../Common/Arrow/Arrow';
 import Footer from '../../Footer/Footer';
@@ -29,10 +31,11 @@ const Home = () => {
     <>
       <div className="container home-page">
         <div className="text-zone">
-          <div className="title-container">
-            <img src="/self.jpg" alt="GITHUB ERROR" className="pfp" />
-            <div className="title-text-container">
-              {/* <span className={letterClass}>H</span>
+          <a href='#/about' className='about-path'>
+            <div className="title-container">
+              <img src="/self.jpg" alt="GITHUB ERROR" className="pfp" />
+              <div className="title-text-container">
+                {/* <span className={letterClass}>H</span>
               <span className={`${letterClass} _12`}>i, </span>
               <span className={`${letterClass} _12`}> </span>
               <span className={`${letterClass} _13`}>I</span>
@@ -47,19 +50,20 @@ const Home = () => {
                 strArray={lastName}
                 idx={23}
               /> */}
-              <h1 className="home-title">Hi, I'm Victor Cheng</h1>
-              {/* <br /> */}
-              <h2 className="home-title2">
-                Frontend Engineer / FullStack Engineer
-              </h2>
+                <h1 className="home-title">Hi, I'm Victor Cheng</h1>
+                {/* <br /> */}
+                <h2 className="home-title2">
+                  Frontend Engineer / FullStack Engineer
+                </h2>
+              </div>
             </div>
-          </div>
-          {/* <Link to="/contact" className="flat-button">
+            {/* <Link to="/contact" className="flat-button">
             Contact Me
           </Link> */}
+          </a>
           {/* <MyTimeline /> */}
           <FloatingArrow text={'Skills & Tools'} />
-          <SkillChips skills={skillsList}/>
+          <SkillChips skills={skillsList} />
 
           <FloatingArrow text={'Work Experience'} />
           <div className="home-grid-container">

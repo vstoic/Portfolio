@@ -22,12 +22,19 @@ const SkillChips = (props) => {
           variant="outlined"
           key={index}
           size="small"
-          sx={{ 
-            color: '#333', 
+          sx={{
+            color: '#333',
             border: '.5px solid #333',
             fontSize: '14px',
             fontWeight: '200',
-            fontFamily: 'Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+            fontFamily:
+              'Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
+            '&:hover': {
+              transition: 'all .3s ease-in-out',
+              transform: 'scale(1.08)',
+              color: '#fff',
+              backgroundColor: '#333',
+            },
           }}
         />
       ))}

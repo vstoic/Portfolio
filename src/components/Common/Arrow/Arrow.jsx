@@ -22,7 +22,7 @@ const styles = {
   bounceImg: {
     width: '50px',
     height: 'auto',
-    opacity: '0.2',
+    opacity: '0.4',
     marginTop: '-10px',
     // animation: 'bounce 2s infinite',
   },

@@ -42,4 +42,15 @@ export const projectsList = [
     liveLink: 'https://socialcrawl.herokuapp.com/#/',
     githubLink: 'https://github.com/vstoic/crawl',
   },
+  {
+    type: 'project',
+    name: 'ReminderPal',
+    imageSrc: '/treasure-hack.png',
+    technology:
+      'React, TailwindCss, DaisyUI, ExpressJS, MongoDB, Axios, NodeMailer API',
+    description: 'Treasure Hacks 3.0 Hackathon (48 Hour)',
+    fullDescription: `This web application boosts productivity by letting users create and manage tasks and events, complete with a countdown timer for deadlines. It also offers SMS or email reminders, alerting users before an event or task is due.`,
+    liveLink: 'n/a',
+    githubLink: 'https://github.com/jakestrahm/treasure-hacks-3',
+  },
 ];
