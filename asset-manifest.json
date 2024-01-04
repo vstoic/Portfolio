@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e8925d2.css",
-    "main.js": "/static/js/main.2d78b282.js",
+    "main.css": "/static/css/main.3d4acb20.css",
+    "main.js": "/static/js/main.3cb59087.js",
     "static/media/Sing_Cheng_Resume.pdf": "/static/media/Sing_Cheng_Resume.13cafbbdcdeaa96c0504.pdf",
     "static/media/gif-bounce-arrow.gif": "/static/media/gif-bounce-arrow.5d84494b5691d17e052a.gif",
     "index.html": "/index.html",
-    "main.6e8925d2.css.map": "/static/css/main.6e8925d2.css.map",
-    "main.2d78b282.js.map": "/static/js/main.2d78b282.js.map"
+    "main.3d4acb20.css.map": "/static/css/main.3d4acb20.css.map",
+    "main.3cb59087.js.map": "/static/js/main.3cb59087.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e8925d2.css",
-    "static/js/main.2d78b282.js"
+    "static/css/main.3d4acb20.css",
+    "static/js/main.3cb59087.js"
   ]
 }
