@@ -9,6 +9,11 @@ export const StyledTitle = styled.div`
   font-weight: 100;
   text-align: right;
   letter-spacing: 14px;
+  cursor: default;
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+  }
   @media screen and (max-width: 1200px) {
     font-size: 26px;
     letter-spacing: 10px;

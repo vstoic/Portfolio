@@ -158,11 +158,15 @@ export default function TemporaryDrawer() {
             {list(anchor)}
           </Drawer>
 
-          <Box sx={{ display: 'flex', alignItems: 'center'}}>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Link component={RouterLink} to="/" className="nav-links">
               Home
             </Link>
-            <Link component={RouterLink} to="/about" className="nav-links">
+            <Link
+              component={RouterLink}
+              to="/about"
+              className="nav-links pulsating-link"
+            >
               About
             </Link>
             {/* <Link
@@ -175,12 +179,12 @@ export default function TemporaryDrawer() {
             <DragHandleSharpIcon
               onClick={toggleDrawer(anchor, true)}
               sx={{
-                fontSize: { xs: 30, sm: 30, md: 22, lg: 22, xl: 22},
+                fontSize: { xs: 30, sm: 30, md: 22, lg: 22, xl: 22 },
                 color: '#333',
                 cursor: 'pointer',
                 margin: '0 8px',
                 '&:hover': {
-                  fontSize: { xs: 34, sm: 34, md: 26, lg: 26, xl: 26},
+                  fontSize: { xs: 34, sm: 34, md: 26, lg: 26, xl: 26 },
                   transition: 'all 0.2s ease-in-out',
                 },
               }}
