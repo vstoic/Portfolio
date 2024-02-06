@@ -33,7 +33,7 @@ const Home = () => {
         <div className="text-zone">
           <a href='#/about' className='about-path'>
             <div className="title-container">
-              <img src="/self.jpg" alt="GITHUB ERROR" className="pfp" />
+              <img src="/self.jpg" alt="victor cheng" className="pfp" />
               <div className="title-text-container">
                 {/* <span className={letterClass}>H</span>
               <span className={`${letterClass} _12`}>i, </span>
