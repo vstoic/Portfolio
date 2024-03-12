@@ -50,10 +50,10 @@ const About = () => {
           </StyledText>
           <StyledText>
             Beyond improving my coding abilities, I'm also working on setting
-            new personal weightlifting records and learning to play the piano
+            new personal weightlifting records 🏋🏻‍♂️, and learning to play the piano 🎹
             (Claude Debussy's 'Clair De Lune'). My other hobbies include
-            photography, film, hiking, bouldering, basketball and coworking at a
-            cafe. If you're reading this and thinking, 'Hey, that sounds like
+            photography 📷, film 🎞️, hk mahjong 🀄, board games 🎲,  hiking 🥾, bouldering 🧗🏼‍♂️, basketball 🏀 and coworking at a
+            cafe ☕. If you're reading this and thinking, 'Hey, that sounds like
             me,' well, just say hi!
           </StyledText>
           <FloatingArrow text={'My Timeline'} />

@@ -1,5 +1,9 @@
 export const skillsList = [
   {
+    avatar: '/react-logo.png',
+    title: 'React',
+  },
+  {
     avatar: '/js.png',
     title: 'JavaScript',
   },
@@ -14,10 +18,6 @@ export const skillsList = [
   {
     avatar: '/python-logo.png',
     title: 'Python',
-  },
-  {
-    avatar: '/react-logo.png',
-    title: 'React',
   },
   {
     avatar: '/redux-logo.png',
@@ -86,6 +86,14 @@ export const skillsList = [
   {
     avatar: '/vmware-logo.png',
     title: 'VMware',
+  }, 
+  {
+    avatar: '/supabase-logo.png',
+    title: 'Supabase',
+  },
+   {
+    avatar: '/vite-logo.png',
+    title: 'Vite',
   },
   {
     avatar: '/postman-logo.png',

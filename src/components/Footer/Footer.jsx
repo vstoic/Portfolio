@@ -57,6 +57,13 @@ export default function Footer() {
         <StyledLink
           target="_blank"
           rel="noopener noreferrer"
+          href="https://letterboxd.com/vstoic/"
+        >
+          Letterboxd
+        </StyledLink>
+        <StyledLink
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://instagram.com/memoir.log"
         >
           Instagram

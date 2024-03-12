@@ -5,7 +5,7 @@ import Drawer from '@mui/material/Drawer';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { Typography } from '@mui/material';
-import Sing_Cheng_Resume from '../../assets/Sing_Cheng_Resume.pdf';
+// import Sing_Cheng_Resume from '../../assets/Sing_Cheng_Resume.pdf';
 import { Link as RouterLink } from 'react-router-dom';
 //icons
 import DragHandleSharpIcon from '@mui/icons-material/DragHandleSharp';
