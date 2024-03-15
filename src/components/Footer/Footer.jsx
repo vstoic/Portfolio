@@ -64,6 +64,13 @@ export default function Footer() {
         <StyledLink
           target="_blank"
           rel="noopener noreferrer"
+          href="https://www.strava.com/athletes/3299755"
+        >
+          Strava
+        </StyledLink>
+        <StyledLink
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://instagram.com/memoir.log"
         >
           Instagram
