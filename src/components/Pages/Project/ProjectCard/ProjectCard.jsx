@@ -156,7 +156,7 @@ export default function ProjectCard(props) {
                 {selectedProject?.outcome}
               </Typography>
               <Typography style={styles.modalSubTitle}>
-                Skills & Skills:{' '}
+                Technology & Skills:{' '}
               </Typography>
               <Typography style={styles.modalText}>
                 {selectedProject?.skills}

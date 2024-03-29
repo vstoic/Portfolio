@@ -12,16 +12,6 @@ export const projectsList = [
   },
   {
     type: 'project',
-    name: 'ProjectQRRestore',
-    imageSrc: '/projectqrrestore.png',
-    technology: 'React, Next.js, Node, Mui',
-    description: 'Quintana Roo: Waste Recovery & Restore',
-    fullDescription:
-      'Webpage to recover waste, organize local communities and restore the coral reefs in Quintana Roo, Mexico. Website provides information for community to organize cleanup and restoration ',
-    liveLink: 'https://www.projectqrrestore.com/',
-  },
-  {
-    type: 'project',
     name: 'Felp',
     imageSrc: '/felp-thumbnail.gif',
     technology: 'React, Redux, Ruby on Rails, PostgreSQL, AWS S3',
