@@ -27,7 +27,7 @@ let styles = {
   game: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'bottom',
     width: '100%',
     height: '100%',
   },
@@ -89,6 +89,7 @@ export default function TemporaryDrawer() {
             />
           </ListItemButton>
         </NavLink>
+
         <Box style={styles.game}>
           <PongGame width={styles.game.width}/>
         </Box>
@@ -108,7 +109,7 @@ export default function TemporaryDrawer() {
         </NavLink> */}
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -146,7 +147,7 @@ export default function TemporaryDrawer() {
             <LinkedInIcon sx={{ fontSize: 60, color: '#0077B5', padding: 0 }} />
           </ListItemButton>
         </a>
-      </Box>
+      </Box> */}
     </Box>
   );
   return (
