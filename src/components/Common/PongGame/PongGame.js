@@ -8,6 +8,7 @@ const PongGame = () => {
     const [player, setPlayer] = useState({ x: 135, y: 580, width: 100, height: 6, velocityX: 45 }); // Adjust player dimensions and position
     const [ball] = useState({ x: boardWidth/2, y: boardHeight/2, width: 8, height: 8, velocityX: 4, velocityY: 3 }); // Adjust ball dimensions and position
     const [score, setScore] = useState(0); // Score state initialized
+    const [topScore, setTopScore] = useState(parseInt(localStorage.getItem('topScore') || '0', 10));
     const [gameOver, setGameOver] = useState(false); // Game over state initialized
     // const [backgroundGradient, setBackgroundGradient] = useState('linear-gradient(to right, #00f260, #0575e6)');
     const gradients = [
@@ -20,6 +21,15 @@ const PongGame = () => {
             'linear-gradient(to right, #ff9966, #ff5e62)', // Reddish
             'linear-gradient(to right, #ff5e62, #ff9966)', // Bloodred
         ];
+
+    const updateTopScore = (currentScore) => {
+        if (currentScore > topScore) {
+            localStorage.setItem('topScore', currentScore.toString());
+            // setTopScore(currentScore);
+            return true;
+        }
+        return false;
+    };
 
     // Initial setup for keyboard controls
     // useEffect(() => {
@@ -42,6 +52,8 @@ const PongGame = () => {
 
     //     return () => window.removeEventListener('keydown', keyDownHandler);
     // }, [player, boardWidth, boardHeight]);
+
+
 
 
     // Initial setup for mouse and touch controls
@@ -93,14 +105,25 @@ const PongGame = () => {
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, boardWidth, boardHeight); // Fill background
 
+            // Draw top score
+            ctx.font = '200 22px Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'right'; // Align text to the right
+            ctx.textBaseline = 'top'; // Align text to the top
+            ctx.fillText(`${topScore}`, boardWidth - 10, 10);
+
             if (gameOver) {
                 ctx.fillStyle = "transparent";
                 ctx.fillRect(0, 0, boardWidth, boardHeight);
                 ctx.font = '200 32px Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
-                ctx.fillStyle = "lightgrey";
+                ctx.fillStyle = "white";
                 ctx.textAlign = "center";
                 ctx.textBaseline = "middle";
-                ctx.fillText(`${score} Points`, boardWidth / 2, boardHeight / 2);
+                // Check if a new top score was hit and update the top score
+                const isNewTopScore = updateTopScore(score);
+                // Decide which message to display based on whether a new top score was achieved
+                const message = isNewTopScore ? `New high score: ${score}!` : `${score} Points`;
+                ctx.fillText(message, boardWidth / 2, boardHeight / 2);
                 return;
             }
             // Update and draw ball
@@ -108,7 +131,7 @@ const PongGame = () => {
             ball.x += ball.velocityX;
             ball.y += ball.velocityY;
             // Draw emoji as ball
-            ctx.font = '24px serif'; // You might need to adjust the size
+            ctx.font = '16px serif'; // You might need to adjust the size
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillText('⚽', ball.x, ball.y); // Use the soccer ball emoji, or choose another
