@@ -13,6 +13,7 @@ import { NavLink } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PongGame from '../Common/PongGame/PongGame';
 
 let styles = {
   menuText: {
@@ -22,6 +23,13 @@ let styles = {
     color: '#333',
     fontSize: '22px',
     fontWeight: '200',
+  },
+  game: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
   },
 };
 
@@ -81,6 +89,10 @@ export default function TemporaryDrawer() {
             />
           </ListItemButton>
         </NavLink>
+        <Box style={styles.game}>
+          <PongGame width={styles.game.width}/>
+        </Box>
+
         {/* <NavLink
           exact="true"
           activeclassname="contact-link"
