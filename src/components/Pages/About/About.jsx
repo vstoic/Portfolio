@@ -23,20 +23,19 @@ const About = () => {
     <>
       <Box className="container about-page">
         <Box className="text-zone">
-          <Box sx={{display:'flex', flexDirection: 'column', alignContent: 'flex-end', width: '100%', margin: '25px 0'}}>
-            <StyledTitle>
-              Swe👨🏻‍💻
-            </StyledTitle>
-            <StyledTitle>
-              Shutterbug📷
-            </StyledTitle>
-            <StyledTitle>
-              Film Enthusiast🎞️
-            </StyledTitle>
-            <StyledTitle>
-              Weightlifter🏋🏻‍♂️
-            </StyledTitle>
-            
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignContent: 'flex-end',
+              width: '100%',
+              margin: '25px 0',
+            }}
+          >
+            <StyledTitle>Swe👨🏻‍💻</StyledTitle>
+            <StyledTitle>Shutterbug📷</StyledTitle>
+            <StyledTitle>Film Enthusiast🎞️</StyledTitle>
+            <StyledTitle>Weightlifter🏋🏻‍♂️</StyledTitle>
           </Box>
           <StyledText>
             I thrive on challenges and constantly seek new adventures, finding
@@ -50,11 +49,12 @@ const About = () => {
           </StyledText>
           <StyledText>
             Beyond improving my coding abilities, I'm also working on setting
-            new personal weightlifting records 🏋🏻‍♂️, and learning to play the piano 🎹
-            (Claude Debussy's 'Clair De Lune'). My other hobbies include
-            photography 📷, film 🎞️, hk mahjong 🀄, board games 🎲,  hiking 🥾, bouldering 🧗🏼‍♂️, basketball 🏀 and coworking at a
-            cafe ☕. If you're reading this and thinking, 'Hey, that sounds like
-            me,' well, just say hi!
+            new personal weightlifting records 🏋🏻‍♂️, and learning to play the
+            piano 🎹 (Claude Debussy's 'Clair De Lune'). My other hobbies
+            include photography 📷, film 🎞️, hk mahjong 🀄, board games 🎲,
+            hiking 🥾, bouldering 🧗🏼‍♂️, basketball 🏀 and coworking at a cafe ☕.
+            If you're reading this and thinking, 'Hey, that sounds like me,'
+            well, just say hi!
           </StyledText>
           <FloatingArrow text={'My Timeline'} />
           <MyTimeline />

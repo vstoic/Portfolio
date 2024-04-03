@@ -27,7 +27,7 @@ export const careerTimeline = [
     location: 'Syosset, NY',
     description: `Gained hands-on experience in software development. Contributed to web projects. Helped manage VMWare test environments for client and engineer efficiency.`,
   },
-    {
+  {
     icon: <WorkIcon />,
     time: 'Sept 2022 - Jan 2023',
     title: 'Developer Intern',
@@ -67,6 +67,7 @@ export const careerTimeline = [
     title: 'For More Details',
     company: 'Contact',
     location: 'Me',
-    description: 'Email me for more details and resume! Thanks for stopping by!',
+    description:
+      'Email me for more details and resume! Thanks for stopping by!',
   },
 ];

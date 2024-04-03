@@ -15,12 +15,11 @@ import {
   ModalTextContainer,
 } from './ProjectCardStyles';
 
-
 export default function ProjectCard(props) {
   const [open, setOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpen = (project) => {
+  const handleOpen = project => {
     setSelectedProject(project);
     setOpen(true);
   };
@@ -29,22 +28,22 @@ export default function ProjectCard(props) {
     setOpen(false);
   };
 
-  //could be removed. but too much work at the moment 
-  const handleMouseEnter = (e) => {
+  //could be removed. but too much work at the moment
+  const handleMouseEnter = e => {
     e.target.style.opacity = '1';
     e.target.style.filter = 'grayscale(18%)';
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = e => {
     e.target.style.opacity = '.8';
     e.target.style.filter = 'grayscale(100%)';
   };
 
-  const handleMouseEnterWork = (e) => {
+  const handleMouseEnterWork = e => {
     e.target.style.transition = 'all 0.1s ease-in-out';
     e.target.style.transform = 'scale(1.02)';
   };
-  const handleMouseLeaveWork = (e) => {
+  const handleMouseLeaveWork = e => {
     e.target.style.transform = 'scale(1)';
   };
 

@@ -19,7 +19,8 @@ let styles = {
   menuText: {
     display: 'flex',
     justifyContent: 'center',
-    fontFamily: 'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
+    fontFamily:
+      'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
     color: '#333',
     fontSize: '22px',
     fontWeight: '200',
@@ -38,7 +39,7 @@ export default function TemporaryDrawer() {
     bottom: false,
   });
 
-  const toggleDrawer = (anchor, open) => (event) => {
+  const toggleDrawer = (anchor, open) => event => {
     if (
       event.type === 'keydown' &&
       (event.key === 'Tab' || event.key === 'Shift')
@@ -49,7 +50,7 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
+  const list = anchor => (
     <Box
       sx={{
         display: 'flex',
@@ -91,7 +92,7 @@ export default function TemporaryDrawer() {
         </NavLink>
 
         <Box style={styles.game}>
-          <PongGame width={styles.game.width}/>
+          <PongGame width={styles.game.width} />
         </Box>
 
         {/* <NavLink
@@ -160,7 +161,7 @@ export default function TemporaryDrawer() {
         backgroundColor: 'white',
       }}
     >
-      {['right'].map((anchor) => (
+      {['right'].map(anchor => (
         <Fragment key={anchor}>
           <Box></Box>
           <Drawer
@@ -192,12 +193,24 @@ export default function TemporaryDrawer() {
             <DragHandleSharpIcon
               onClick={toggleDrawer(anchor, true)}
               sx={{
-                fontSize: { xs: 30, sm: 30, md: 22, lg: 22, xl: 22 },
+                fontSize: {
+                  xs: 30,
+                  sm: 30,
+                  md: 22,
+                  lg: 22,
+                  xl: 22,
+                },
                 color: '#333',
                 cursor: 'pointer',
                 margin: '0 8px',
                 '&:hover': {
-                  fontSize: { xs: 34, sm: 34, md: 26, lg: 26, xl: 26 },
+                  fontSize: {
+                    xs: 34,
+                    sm: 34,
+                    md: 26,
+                    lg: 26,
+                    xl: 26,
+                  },
                   transition: 'all 0.2s ease-in-out',
                 },
               }}

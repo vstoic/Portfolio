@@ -5,10 +5,10 @@ import MobileSideBar from '../Sidebar/MobileSideBar';
 
 const Layout = () => {
   return (
-    <div className='App'>
+    <div className="App">
       {/* <MobileSideBar /> */}
       <Sidebar />
-      <div className='page'>
+      <div className="page">
         <Outlet />
       </div>
     </div>

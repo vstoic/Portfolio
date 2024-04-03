@@ -86,12 +86,12 @@ export const skillsList = [
   {
     avatar: '/vmware-logo.png',
     title: 'VMware',
-  }, 
+  },
   {
     avatar: '/supabase-logo.png',
     title: 'Supabase',
   },
-   {
+  {
     avatar: '/vite-logo.png',
     title: 'Vite',
   },

@@ -1,7 +1,6 @@
-import styled from 'styled-components'; 
+import styled from 'styled-components';
 import { Box, Modal } from '@mui/material';
 // import Modal from '@mui/material/Modal';
-
 
 export const Title = styled.div`
   fontFamily: 'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
@@ -24,82 +23,82 @@ export const LinkText = styled.p`
     }
   `;
 
-  
-  export const WorkImage = styled.img`
+export const WorkImage = styled.img`
   width: 388px;
   height: 285px;
   object-fit: cover;
   border-radius: 3px;
   opacity: 0.8;
   transition: opacity 500ms ease;
-  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2),
-  0px 3px 5px 0px rgba(0, 0, 0, 0.04);
-  
+  box-shadow:
+    0px 2px 5px 1px rgba(0, 0, 0, 0.2),
+    0px 3px 5px 0px rgba(0, 0, 0, 0.04);
+
   @media (max-width: 1200px) {
     height: auto%;
     width: 100%;
   }
-  `;
-  
-  export const ProjectImage = styled.img`
-    width: 388px;
-    height: 285px;
-    object-fit: cover;
-    border-radius: 3px;
-    opacity: 0.8;
-    filter: grayscale(100%);
-    transition: opacity 500ms ease;
-    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2),
-      0px 3px 5px 0px rgba(0, 0, 0, 0.04);
+`;
 
-    @media (max-width: 1200px) {
-      height: auto%;
-      width: 100%;
-      filter: grayscale(0%);
-    }
-  `;
-  
-  export const CustomModal = styled(Modal)`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+export const ProjectImage = styled.img`
+  width: 388px;
+  height: 285px;
+  object-fit: cover;
+  border-radius: 3px;
+  opacity: 0.8;
+  filter: grayscale(100%);
+  transition: opacity 500ms ease;
+  box-shadow:
+    0px 2px 5px 1px rgba(0, 0, 0, 0.2),
+    0px 3px 5px 0px rgba(0, 0, 0, 0.04);
+
+  @media (max-width: 1200px) {
+    height: auto%;
     width: 100%;
+    filter: grayscale(0%);
+  }
+`;
+
+export const CustomModal = styled(Modal)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  backdrop-filter: blur(5px);
+  flex-wrap: wrap;
+  border: none;
+  overflow: scroll;
+
+  @media (max-width: 900px) {
+    width: 100vw;
+    flex-direction: column;
+  }
+`;
+
+export const ModalContainer = styled(Box)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  width: 85%;
+  height: 85%;
+  min-height: 85%;
+  overflow: scroll;
+
+  @media (max-width: 900px) {
+    overflow: scroll;
+    overflow-y: auto; /* Allow vertical scrolling */
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
     height: 100%;
-    border: 1px solid #ccc;
-    backdrop-filter: blur(5px);
-    flex-wrap: wrap;
-    border: none;
-    overflow: scroll;
-
-    @media (max-width: 900px) {
-      width: 100vw;
-      flex-direction: column;
-    }
-  `;
-
-  export const ModalContainer = styled(Box)`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    width: 85%;
-    height: 85%;
-    min-height: 85%;
-    overflow: scroll;
-
-
-    @media (max-width: 900px) {
-      overflow: scroll;
-      overflow-y: auto; /* Allow vertical scrolling */
-      flex-direction: column;
-      align-items: center;
-      width: 100vw;
-      height: 100%;
-      margin: 0px;
-      padding: 0px;
-    }
-  `;
+    margin: 0px;
+    padding: 0px;
+  }
+`;
 
 export const ModalImageContainer = styled(Box)`
   width: 50%;
@@ -121,11 +120,10 @@ export const ModalTextContainer = styled(Box)`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  background-color: white; 
+  background-color: white;
   width: 50%;
   // height: 100%;
   padding: 30px 50px;
-
 
   @media (max-width: 900px) {
     width: 80vw;
@@ -134,7 +132,6 @@ export const ModalTextContainer = styled(Box)`
     // overflow: none;
   }
 `;
-
 
 export const styles = {
   eachGrid: {
@@ -147,7 +144,6 @@ export const styles = {
     margin: 0, // Add this to reset margin
     padding: 0, // Add this to reset padding
     animation: 'fadeIn 1s 0.5s backwards',
-
   },
   textContainer: {
     display: 'flex',

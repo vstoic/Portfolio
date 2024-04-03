@@ -9,8 +9,18 @@ export const StyledLink = styled(Link)`
     color: black;
     font-weight: 100;
     font-size: 14px;
-    font-family: 'Phi', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    font-family:
+      'Phi',
+      -apple-system,
+      BlinkMacSystemFont,
+      Segoe UI,
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
       sans-serif;
     letter-spacing: 1px;
     width: 100%;
@@ -23,11 +33,9 @@ export const StyledLink = styled(Link)`
     }
 
     @media (max-width: 1200px) {
-
       font-size: 14px;
       text-align: left;
       margin: 0px 0px 20px 10%; /* Adjust margins for mobile */
     }
   }
 `;
-

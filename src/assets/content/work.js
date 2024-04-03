@@ -10,12 +10,13 @@ export const workList = [
     time: 'Mar 2023 - Present',
     outcome: `Acquired proficiency in utilizing Python to architect APIs for backend application development. Acquired skills in Vim within a Linux environment to script without relying on conventional code editors. Attained skills in managing VMware's Cloud Sphere, enhancing skills in cloud infrastructure management. Expanded knowledge in data management and transfer.`,
   },
-   {
+  {
     type: 'work',
     name: 'ProjectQRRestore',
     imageSrc: '/projectqrrestore.png',
     jobTitle: 'Developer Intern',
-    skills: 'React, Next.js, Node.js, Mui, Emotion, AWS (S3, CloudFront), Webpack, HTTP/3',
+    skills:
+      'React, Next.js, Node.js, Mui, Emotion, AWS (S3, CloudFront), Webpack, HTTP/3',
     // description: 'Quintana Roo: Waste Recovery & Restore',
     outcome: `Utilize React, Next.js, and Node.js to enhance the ProjectQRRestore platform, focusing on community-driven environmental restoration in Quintana Roo, Mexico
       Design responsive interfaces with MUI and Emotion, optimizing for performance with Next.js features and AWS (S3, CloudFront) for content delivery
@@ -26,7 +27,7 @@ export const workList = [
     time: 'Sept 2022 - January 2023',
     liveLink: 'https://www.projectqrrestore.com/',
   },
-   {
+  {
     type: 'work',
     name: 'NY Code & Coffee',
     imageSrc: '/code_&_cooffee_logo.png',
@@ -34,8 +35,7 @@ export const workList = [
     // skills: 'React, Next.js, Node.js, Mui, Emotion, AWS (S3, CloudFront), Webpack, HTTP/3',
     // description: 'Quintana Roo: Waste Recovery & Restore',
     // outcome: ``,
-    description:
-      '',
+    description: '',
     time: 'March 2024 - Present',
   },
   {
@@ -50,5 +50,4 @@ export const workList = [
     outcome:
       '2019-2020 Quadruple Gold Awarded Andi Levine Team that sold 15 Million in volume during a covid year. \n\n In 2020-2021 Andi Levine Team was Platinum Awarded getting #1 in number of sales volume, units sold & GCI ',
   },
-]
-
+];

@@ -23,7 +23,7 @@ export default function MyTimeline() {
           </TimelineSeparator>
           <TimelineContent
             sx={{
-              padding: {xs: '0px 16px', sm: '0px 16px', md: '5px 16px' },
+              padding: { xs: '0px 16px', sm: '0px 16px', md: '5px 16px' },
             }}
           >
             <StyledTitle component="span">{item.title}</StyledTitle>

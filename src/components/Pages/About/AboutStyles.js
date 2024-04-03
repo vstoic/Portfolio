@@ -1,8 +1,19 @@
 import styled from 'styled-components';
 
 export const StyledTitle = styled.div`
-  font-family: Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    Phi,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
   font-size: 34px;
   margin: px 0px 5px 0px;
   color: black;
@@ -22,8 +33,18 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledText = styled.div`
-  font-family: Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+  font-family:
+    Phi,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
     sans-serif;
   font-size: 16px;
   color: #333;
@@ -34,7 +55,6 @@ export const StyledText = styled.div`
   @media screen and (max-width: 1200px) {
     font-size: 12px;
   }
-  
 `;
 
 // .about-image {
@@ -87,7 +107,7 @@ export const StyledText = styled.div`
 //     border-radius: 8px;
 //     border: 1px solid #c1c1c1;
 //     animation: fadeIn 1s 1.8s backwards;
-  
+
 //     &:hover {
 //       background-color: #4d4d4e;
 //       color: #fff;

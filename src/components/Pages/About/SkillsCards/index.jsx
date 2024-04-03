@@ -42,4 +42,4 @@ export {
   sql,
   webpack,
   tailwind,
-}
+};

@@ -12,7 +12,7 @@ const styles = {
   },
 };
 
-const SkillChips = (props) => {
+const SkillChips = props => {
   return (
     <Box style={styles.ChipContainer}>
       {props.skills.map((item, index) => (

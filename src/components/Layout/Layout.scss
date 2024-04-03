@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .container {
@@ -51,9 +50,19 @@
       .text {
         font-size: 12px;
         color: #2d2d2d;
-        font-family: Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-        sans-serif;
+        font-family:
+          Phi,
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          Fira Sans,
+          Droid Sans,
+          Helvetica Neue,
+          sans-serif;
         margin-top: 10px;
       }
     }
@@ -111,12 +120,12 @@
     &.contact-page,
     &.about-page,
     &.project-page {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
 
-        gap: 0;
+      gap: 0;
       .text-zone {
         transform: none;
         width: 88%;

@@ -15,7 +15,8 @@ const styles = {
     color: '#333',
     fontWeight: '200',
     fontSize: '18px',
-    fontFamily: 'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
+    fontFamily:
+      'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
     // letterSpacing: '1.5px',
     animation: 'fadeIn 1s .5s backwards',
   },
@@ -28,13 +29,13 @@ const styles = {
   },
 };
 
-const FloatingArrow = (props) => {
-    return (
-      <Box style={styles.bounceContainer}> 
-          <Typography style={styles.bounceText} > {props.text}</Typography>
-          <img src={Arrow} style={styles.bounceImg}/> 
-      </Box>
-    );
-}
+const FloatingArrow = props => {
+  return (
+    <Box style={styles.bounceContainer}>
+      <Typography style={styles.bounceText}> {props.text}</Typography>
+      <img src={Arrow} style={styles.bounceImg} />
+    </Box>
+  );
+};
 
 export default FloatingArrow;

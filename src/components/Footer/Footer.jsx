@@ -1,8 +1,7 @@
-import { Box, Typography } from "@mui/material";
-import { Divider } from "@mui/material";
-import { StyledLink } from "./FooterStyle";
+import { Box, Typography } from '@mui/material';
+import { Divider } from '@mui/material';
+import { StyledLink } from './FooterStyle';
 import { Link as RouterLink } from 'react-router-dom';
-
 
 export default function Footer() {
   return (
@@ -82,7 +81,7 @@ export default function Footer() {
             color: '#4d4d4ec3',
             fontWeight: '100',
             fontSize: '14px',
-            display: { xs: 'none', sm: 'none', md: 'none', lg: 'block'},
+            display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
             margin: '10px 30px 55px 0',
             fontFamily: `Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
               Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,

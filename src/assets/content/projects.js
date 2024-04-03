@@ -1,12 +1,12 @@
-
 export const projectsList = [
   {
     type: 'project',
     name: 'Protect Oregon Watershed',
     imageSrc: '/POW.png',
-    technology: 'React, Next.js, Next Ui, Daisy UI, Tailwind CSS, Flask, Vercel',
+    technology:
+      'React, Next.js, Next Ui, Daisy UI, Tailwind CSS, Flask, Vercel',
     description: 'App Academy Winter Hackathon (Jan-2024)',
-    fullDescription:`For this hackathon, we reached out to community non-profit companies in need of a website revamp. In Oregon, landowners were spraying toxic herbicides near vital water sources in Beaver Creek Watershed. This site revamp includes a comprehensive digital advocacy platform, meticulously designed to raise awareness and prompt action. The site also has admin functionality that allows the admins of the non-profit to update events, news, and spray notifications. It's crafted not only to inform but also to inspire community involvement, showcasing a concerted effort to protect natural resources, advocate for sustainable living, and foster a collective commitment to a greener future.`,
+    fullDescription: `For this hackathon, we reached out to community non-profit companies in need of a website revamp. In Oregon, landowners were spraying toxic herbicides near vital water sources in Beaver Creek Watershed. This site revamp includes a comprehensive digital advocacy platform, meticulously designed to raise awareness and prompt action. The site also has admin functionality that allows the admins of the non-profit to update events, news, and spray notifications. It's crafted not only to inform but also to inspire community involvement, showcasing a concerted effort to protect natural resources, advocate for sustainable living, and foster a collective commitment to a greener future.`,
     liveLink: 'https://protect-oregon-watershed.vercel.app/',
     githubLink: 'https://github.com/Murphyn5/ProtectOregonWatershed',
   },

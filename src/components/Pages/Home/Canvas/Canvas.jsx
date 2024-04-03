@@ -127,8 +127,6 @@
 //   };
 // };
 
-
-
 // import React, { useState, useEffect, useRef} from 'react';
 // import Particle from './Particle';
 // import './canvas.scss';
