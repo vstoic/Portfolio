@@ -22,7 +22,7 @@ const PongGame = ({ width, height }) => {
     velocityY: 4,
   }); // Adjust ball dimensions and position
   const [score, setScore] = useState(0); // Score state initialized
-  const [topScore] = useState(
+  const [topScore, setTopScore] = useState(
     parseInt(localStorage.getItem('topScore') || '0', 10)
   );
   const [gameOver, setGameOver] = useState(false); // Game over state initialized
@@ -64,7 +64,7 @@ const PongGame = ({ width, height }) => {
   const updateTopScore = currentScore => {
     if (currentScore > topScore) {
       localStorage.setItem('topScore', currentScore.toString());
-      // setTopScore(currentScore);
+      setTopScore(currentScore);
       return true;
     }
     return false;
