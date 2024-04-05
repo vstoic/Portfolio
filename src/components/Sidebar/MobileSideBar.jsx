@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import { Typography } from '@mui/material';
+import { Typography, useMediaQuery, useTheme } from '@mui/material';
 // import Sing_Cheng_Resume from '../../assets/Sing_Cheng_Resume.pdf';
 import { Link as RouterLink } from 'react-router-dom';
 //icons
@@ -14,7 +14,7 @@ import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PongGame from '../Common/PongGame/PongGame';
-
+import GameDrawer from '../Games/GameDrawer';
 let styles = {
   menuText: {
     display: 'flex',
@@ -29,12 +29,17 @@ let styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'bottom',
-    width: '100%',
-    height: '100%',
+    width: '250',
+    height: '500',
   },
 };
 
 export default function TemporaryDrawer() {
+  // const [mobileView, setMobileView] = useState(false);
+  const theme = useTheme();
+
+  const mobileView = useMediaQuery(theme.breakpoints.down('md'));
+
   const [state, setState] = useState({
     bottom: false,
   });
@@ -62,8 +67,18 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <Box sx={{ width: '25vw' }}>
-        <NavLink
+      <Box
+        sx={{
+          width: mobileView ? '100vw' : '40vw', // Adjust the width based on mobileView
+        }}
+      >
+        <Box
+          onClick={event => event.stopPropagation()}
+          // style={{ height: '100%' }}
+        >
+          <GameDrawer />
+        </Box>
+        {/* <NavLink
           exact="true"
           to="/"
           className="drawer-text"
@@ -75,8 +90,8 @@ export default function TemporaryDrawer() {
               primary={<Typography style={styles.menuText}>Home</Typography>}
             />
           </ListItemButton>
-        </NavLink>
-        <NavLink
+        </NavLink> */}
+        {/* <NavLink
           exact="true"
           activeclassname="about-link"
           to="/about"
@@ -89,11 +104,7 @@ export default function TemporaryDrawer() {
               primary={<Typography style={styles.menuText}>About</Typography>}
             />
           </ListItemButton>
-        </NavLink>
-
-        <Box style={styles.game}>
-          <PongGame width={styles.game.width} />
-        </Box>
+        </NavLink> */}
 
         {/* <NavLink
           exact="true"
@@ -108,47 +119,50 @@ export default function TemporaryDrawer() {
             />
           </ListItemButton>
         </NavLink> */}
+        {/* --------------------------this is icon links --------------------- */}
+        <Box
+          sx={{
+            display: 'flex',
+            // flexDirection: 'column',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            width: '100%',
+          }}
+        >
+          <a
+            exact="true"
+            // activeclassname="about-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/vstoic/vstoic.github.io"
+            style={{
+              textDecoration: 'none',
+              width: '100%',
+            }}
+          >
+            <ListItemButton sx={{ justifyContent: 'center' }}>
+              <GitHubIcon sx={{ fontSize: 35, color: '#333' }} />
+            </ListItemButton>
+          </a>
+          <a
+            exact="true"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/victorcheng3/"
+            style={{
+              textDecoration: 'none',
+              width: '100%',
+            }}
+          >
+            <ListItemButton sx={{ justifyContent: 'center' }}>
+              <LinkedInIcon
+                sx={{ fontSize: 40, color: '#0077B5', padding: 0 }}
+              />
+            </ListItemButton>
+          </a>
+        </Box>
+        {/* --------------------------this is icon links --------------------- */}
       </Box>
-
-      {/* <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
-          alignItems: 'center',
-          width: '100%',
-        }}
-      >
-        <a
-          exact="true"
-          // activeclassname="about-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/vstoic/vstoic.github.io"
-          style={{
-            textDecoration: 'none',
-            width: '100%',
-          }}
-        >
-          <ListItemButton sx={{ justifyContent: 'center' }}>
-            <GitHubIcon sx={{ fontSize: 55, color: '#333' }} />
-          </ListItemButton>
-        </a>
-        <a
-          exact="true"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/victorcheng3/"
-          style={{
-            textDecoration: 'none',
-            width: '100%',
-          }}
-        >
-          <ListItemButton sx={{ justifyContent: 'center' }}>
-            <LinkedInIcon sx={{ fontSize: 60, color: '#0077B5', padding: 0 }} />
-          </ListItemButton>
-        </a>
-      </Box> */}
     </Box>
   );
   return (
@@ -190,31 +204,33 @@ export default function TemporaryDrawer() {
             >
               Resume
             </Link> */}
-            <DragHandleSharpIcon
-              onClick={toggleDrawer(anchor, true)}
-              sx={{
-                fontSize: {
-                  xs: 30,
-                  sm: 30,
-                  md: 22,
-                  lg: 22,
-                  xl: 22,
-                },
-                color: '#333',
-                cursor: 'pointer',
-                margin: '0 8px',
-                '&:hover': {
+            {!mobileView && (
+              <DragHandleSharpIcon
+                onClick={toggleDrawer(anchor, true)}
+                sx={{
                   fontSize: {
-                    xs: 34,
-                    sm: 34,
-                    md: 26,
-                    lg: 26,
-                    xl: 26,
+                    xs: 30,
+                    sm: 30,
+                    md: 22,
+                    lg: 22,
+                    xl: 22,
                   },
-                  transition: 'all 0.2s ease-in-out',
-                },
-              }}
-            />
+                  color: '#333',
+                  cursor: 'pointer',
+                  margin: '0 8px',
+                  '&:hover': {
+                    fontSize: {
+                      xs: 34,
+                      sm: 34,
+                      md: 26,
+                      lg: 26,
+                      xl: 26,
+                    },
+                    transition: 'all 0.2s ease-in-out',
+                  },
+                }}
+              />
+            )}
           </Box>
         </Fragment>
       ))}

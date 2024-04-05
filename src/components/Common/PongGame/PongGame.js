@@ -1,37 +1,36 @@
+import { Button, Typography, Box } from '@mui/material';
 import React, { useRef, useEffect, useState } from 'react';
 
-const PongGame = () => {
+const PongGame = ({ width, height }) => {
   const canvasRef = useRef(null);
   // Adjusting the initial states to fit the new canvas size
-  const [boardWidth] = useState(390);
-  const [boardHeight] = useState(600);
+  const [boardWidth, setBoardWidth] = useState(width || 250); // Default width
+  const [boardHeight, setBoardHeight] = useState(height || 650); // Default height
   const [player, setPlayer] = useState({
     x: 135,
-    y: 580,
-    width: 100,
-    height: 6,
+    y: 620,
+    width: boardWidth / 2.4,
+    height: 17,
     velocityX: 45,
   }); // Adjust player dimensions and position
-  const [ball] = useState({
+  const [ball, setBall] = useState({
     x: boardWidth / 2,
     y: boardHeight / 2,
-    width: 8,
-    height: 8,
+    width: 15,
+    height: 15,
     velocityX: 5,
     velocityY: 4,
   }); // Adjust ball dimensions and position
   const [score, setScore] = useState(0); // Score state initialized
-  const [topScore, setTopScore] = useState(
+  const [topScore] = useState(
     parseInt(localStorage.getItem('topScore') || '0', 10)
   );
   const [gameOver, setGameOver] = useState(false); // Game over state initialized
   const emojis = useRef([]);
-  const lastRenderTime = useRef(Date.now());
-
-  // const [backgroundGradient, setBackgroundGradient] = useState('linear-gradient(to right, #00f260, #0575e6)');
   const gradients = [
-    'linear-gradient(to bottom, #3a7bd5, #3a6073)', // Cool Blue
-    'linear-gradient(to right, #4ca1af, #c4e0e5)', // Light Blue
+    'linear-gradient(to right, #ffffff, #3a7bd5)', // white to blue
+    'linear-gradient(to right, #3a7bd5, #3a6073)', // Cool Blue
+    'linear-gradient(to right, #4ca1af, #134e5e)', // Light Blue
     'linear-gradient(to right, #134e5e, #71b280)', // Greenish
     'linear-gradient(to right, #ffafbd, #ffc3a0)', // Pinkish
     'linear-gradient(to right, #ff7e5f, #feb47b)', // Warm Orange
@@ -40,6 +39,29 @@ const PongGame = () => {
     'linear-gradient(to right, #ff5e62, #ff9966)', // Bloodred
   ];
 
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    // Ensure canvas dimensions are initially set to match state
+    canvas.width = boardWidth;
+    canvas.height = boardHeight;
+
+    const resizeObserver = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        // Use the bounding box of the parent element
+        const { width, height } = entry.contentRect;
+        setBoardWidth(width);
+        setBoardHeight(height);
+      }
+    });
+
+    const parentElement = canvas.parentNode;
+    resizeObserver.observe(parentElement);
+
+    return () => resizeObserver.unobserve(parentElement);
+  }, []);
+
   const updateTopScore = currentScore => {
     if (currentScore > topScore) {
       localStorage.setItem('topScore', currentScore.toString());
@@ -47,6 +69,31 @@ const PongGame = () => {
       return true;
     }
     return false;
+  };
+
+  const resetGame = () => {
+    // Reset score
+    setScore(0);
+
+    // Reset ball position and velocity
+    setBall({
+      x: boardWidth / 2,
+      y: boardHeight / 2,
+      width: 15,
+      height: 15,
+      velocityX: 5,
+      velocityY: 4,
+    });
+
+    // Reset player position if necessary
+    setPlayer(prevPlayer => ({
+      ...prevPlayer,
+      x: boardWidth / 2 - 50, // Assuming the initial x position is centered
+      y: boardHeight - 10, // Assuming a 10px margin from the bottom
+    }));
+
+    // Set gameOver to false to restart the game
+    setGameOver(false);
   };
 
   // Initial setup for keyboard controls
@@ -111,9 +158,9 @@ const PongGame = () => {
       emojis.current = new Array(8).fill(null).map(() => ({
         x: Math.random() * boardWidth,
         y: Math.random() * 50, // Start from the top
-        velocityY: 15,
+        velocityY: 12,
         emoji: '⚽', // This can be randomized or different for each
-        size: Math.random() * 80 + 10, // Sizes between 10 and 30
+        size: Math.random() * 60 + 10, // Sizes between 10 and 30
       }));
     }
   }, [gameOver, boardWidth]);
@@ -122,6 +169,7 @@ const PongGame = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
+    let rotation = 0;
     let animationFrameId;
 
     const draw = () => {
@@ -149,7 +197,7 @@ const PongGame = () => {
       ctx.fillStyle = 'white';
       ctx.textAlign = 'right'; // Align text to the right
       ctx.textBaseline = 'top'; // Align text to the top
-      ctx.fillText(`${topScore}`, boardWidth - 10, 10);
+      ctx.fillText(`HI ${topScore}`, boardWidth - 10, 10);
 
       if (gameOver) {
         // Draw game over screen
@@ -171,29 +219,11 @@ const PongGame = () => {
           // Apply gravity
           emoji.velocityY += 0.2 + emoji.size / 50; // Larger emojis fall slightly faster
           emoji.y += emoji.velocityY;
-
           // Collision with the bottom of the canvas
           if (emoji.y + emoji.size / 2 >= boardHeight) {
             emoji.y = boardHeight - emoji.size / 2;
-            // emoji.velocityY *= -0.5; // Bounce effect
-            // maje the bounce velocity 1/4 of the falling velocity to make it look more realistic
             emoji.velocityY = -emoji.velocityY / 1.4;
           }
-
-          // // Prevent emoji overlap
-          // for (let j = 0; j < emojis.current.length; j++) {
-          //     if (j !== index) { // Don't check an emoji against itself
-          //         const otherEmoji = emojis.current[j];
-          //         const dx = emoji.x - otherEmoji.x;
-          //         const dy = emoji.y - otherEmoji.y;
-          //         const distance = Math.sqrt(dx * dx + dy * dy);
-          //         if (distance < emoji.size / 2 + otherEmoji.size / 2) {
-          //             // Simple overlap correction
-          //             emoji.y = otherEmoji.y - emoji.size / 2 - otherEmoji.size / 2;
-          //             emoji.velocityY = 0;
-          //         }
-          //     }
-          // }
 
           // Draw emoji
           ctx.font = `${emoji.size}px serif`;
@@ -201,18 +231,40 @@ const PongGame = () => {
           ctx.textBaseline = 'middle';
           ctx.fillText(emoji.emoji, emoji.x, emoji.y);
         });
-
+        animationFrameId = requestAnimationFrame(draw);
         return;
       }
       // Update and draw ball
       // Update ball position
       ball.x += ball.velocityX;
       ball.y += ball.velocityY;
-      // Draw emoji as ball
-      ctx.font = '16px serif'; // You might need to adjust the size
+
+      // Before drawing the emoji, save the current context state
+      ctx.save();
+
+      // Move the rotation center to the ball's position
+      ctx.translate(ball.x, ball.y);
+
+      // Rotate the canvas context
+      ctx.rotate(rotation);
+
+      // Draw the emoji centered on the new origin
+      ctx.font = '26px serif'; // Adjust size as needed
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText('⚽', ball.x, ball.y); // Use the soccer ball emoji, or choose another
+      ctx.fillText('⚽', 0, 0); // Draw at the origin, which has been translated to the ball's position
+
+      // Restore the canvas context to its original state
+      ctx.restore();
+
+      // Update the rotation
+      rotation += 0.1; // Adjust this to control the spin speed
+
+      // Draw emoji as ball
+      // ctx.font = '22px serif'; // You might need to adjust the size
+      // ctx.textAlign = 'center';
+      // ctx.textBaseline = 'middle';
+      // ctx.fillText('⚽', ball.x, ball.y); // Use the soccer ball emoji, or choose another
       // Collision with the walls
       if (ball.y <= 0) {
         // Top wall
@@ -232,9 +284,7 @@ const PongGame = () => {
         ball.x >= player.x &&
         ball.x <= player.x + player.width
       ) {
-        ball.velocityY = -Math.abs(ball.velocityY * 1.15);
-        // ball.velocityY = -Math.abs(ball.velocityY * 2.15);
-        // setBackgroundGradient('linear-gradient(to right, #e55d87, #5fc3e4)');
+        ball.velocityY = -Math.abs(ball.velocityY * 1.1);
         setScore(score + 1);
       }
       // Draw player
@@ -242,14 +292,14 @@ const PongGame = () => {
       ctx.fillRect(player.x, player.y, player.width, player.height);
       // Draw score
       ctx.font =
-        '200 32px Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif';
-      ctx.fillStyle = 'lightgrey';
+        '200 96px Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.textAlign = 'center'; // Center horizontally
+      ctx.textBaseline = 'middle'; // Center vertically
       ctx.fillText(`${score}`, boardWidth / 2, boardHeight / 2); // Position the score at the top left corner
       animationFrameId = window.requestAnimationFrame(draw);
     };
-
     draw();
-
     return () => {
       window.cancelAnimationFrame(animationFrameId);
     };
@@ -266,7 +316,31 @@ const PongGame = () => {
     updateTopScore,
   ]);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <>
+      <canvas ref={canvasRef} width={boardWidth} height={boardHeight} />
+      {gameOver && (
+        <Button
+          onClick={resetGame}
+          style={{
+            backgroundColor: 'black',
+            color: 'white',
+            position: 'absolute',
+            padding: '10px 20px',
+            fontFamily:
+              'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
+            fontSize: '16px',
+            fontWeight: '200',
+            top: '60%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
+          ↺ Play Again
+        </Button>
+      )}
+    </>
+  );
 };
 
 export default PongGame;
