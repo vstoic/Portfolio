@@ -8,9 +8,10 @@ const PongGame = ({ width, height }) => {
   const [boardHeight, setBoardHeight] = useState(height || 650); // Default height
   const [player, setPlayer] = useState({
     x: 135,
-    y: 620,
-    width: boardWidth / 2.4,
-    height: 17,
+    y: 610,
+    width: 130,
+    height: 25,
+    borderRadius: 10,
     velocityX: 45,
   }); // Adjust player dimensions and position
   const [ball, setBall] = useState({
@@ -38,14 +39,34 @@ const PongGame = ({ width, height }) => {
     'linear-gradient(to right, #ff5e62, #ff9966)', // Bloodred
   ];
 
+  const resetGame = () => {
+    setScore(0);
+    setBall({
+      x: boardWidth / 2,
+      y: boardHeight / 2,
+      width: 15,
+      height: 15,
+      velocityX: 5,
+      velocityY: 4,
+    });
+    setPlayer({
+      x: 135,
+      y: 610,
+      width: 130,
+      height: 25,
+      borderRadius: 10,
+      velocityX: 45,
+    });
+    setGameOver(false);
+  };
+
+  //update the canvas dimensions when the window is resized
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     // Ensure canvas dimensions are initially set to match state
     canvas.width = boardWidth;
     canvas.height = boardHeight;
-
     const resizeObserver = new ResizeObserver(entries => {
       for (let entry of entries) {
         // Use the bounding box of the parent element
@@ -54,10 +75,8 @@ const PongGame = ({ width, height }) => {
         setBoardHeight(height);
       }
     });
-
     const parentElement = canvas.parentNode;
     resizeObserver.observe(parentElement);
-
     return () => resizeObserver.unobserve(parentElement);
   }, []);
 
@@ -70,30 +89,25 @@ const PongGame = ({ width, height }) => {
     return false;
   };
 
-  const resetGame = () => {
-    // Reset score
-    setScore(0);
-
-    // Reset ball position and velocity
-    setBall({
-      x: boardWidth / 2,
-      y: boardHeight / 2,
-      width: 15,
-      height: 15,
-      velocityX: 5,
-      velocityY: 4,
-    });
-
-    // Reset player position
-    setPlayer(prevPlayer => ({
-      ...prevPlayer,
-      x: boardWidth / 2 - 50, // Assuming the initial x position is centered
-      y: boardHeight - 10, // Assuming a 10px margin from the bottom
-    }));
-
-    // Set gameOver to false to restart the game
-    setGameOver(false);
-  };
+  function drawRoundedPlayer(ctx, x, y, width, height, borderRadius) {
+    ctx.beginPath();
+    ctx.moveTo(x + borderRadius, y);
+    ctx.lineTo(x + width - borderRadius, y);
+    ctx.quadraticCurveTo(x + width, y, x + width, y + borderRadius);
+    ctx.lineTo(x + width, y + height - borderRadius);
+    ctx.quadraticCurveTo(
+      x + width,
+      y + height,
+      x + width - borderRadius,
+      y + height
+    );
+    ctx.lineTo(x + borderRadius, y + height);
+    ctx.quadraticCurveTo(x, y + height, x, y + height - borderRadius);
+    ctx.lineTo(x, y + borderRadius);
+    ctx.quadraticCurveTo(x, y, x + borderRadius, y);
+    ctx.closePath();
+    ctx.fill();
+  }
 
   // Initial setup for mouse and touch controls
   useEffect(() => {
@@ -151,7 +165,7 @@ const PongGame = ({ width, height }) => {
 
     const draw = () => {
       ctx.clearRect(0, 0, boardWidth, boardHeight);
-      const gradientIndex = Math.floor(score / 3) % gradients.length;
+      const gradientIndex = Math.floor(score / 4) % gradients.length;
       const gradient = ctx.createLinearGradient(0, 0, boardWidth, 0);
       const colors = gradients[gradientIndex].match(/#([a-f\d]{6})/gi); // Extract colors from the gradient string
       gradient.addColorStop(0, colors[0]);
@@ -241,13 +255,22 @@ const PongGame = ({ width, height }) => {
         ball.x >= player.x &&
         ball.x <= player.x + player.width
       ) {
-        ball.velocityY = -Math.abs(ball.velocityY * 1.1);
+        ball.velocityY = -Math.abs(ball.velocityY * 1.06);
         setScore(score + 1);
       }
 
       // Draw player
-      ctx.fillStyle = 'black'; // Set player color
-      ctx.fillRect(player.x, player.y, player.width, player.height);
+      ctx.fillStyle = '#212121'; // Set player color
+      drawRoundedPlayer(
+        ctx,
+        player.x,
+        player.y,
+        player.width,
+        player.height,
+        player.borderRadius
+      );
+
+      // ctx.fillRect(player.x, player.y, player.width, player.height);
 
       // Draw score
       ctx.font =
