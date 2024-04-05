@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PongGame from '../Common/PongGame/PongGame';
+import PongGame from '../Games/PongGame/PongGame';
 import GameDrawer from '../Games/GameDrawer';
 let styles = {
   menuText: {

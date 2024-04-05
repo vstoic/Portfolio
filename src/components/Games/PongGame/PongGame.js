@@ -1,4 +1,4 @@
-import { Button, Typography, Box } from '@mui/material';
+import { Button } from '@mui/material';
 import React, { useRef, useEffect, useState } from 'react';
 
 const PongGame = ({ width, height }) => {
@@ -28,7 +28,6 @@ const PongGame = ({ width, height }) => {
   const [gameOver, setGameOver] = useState(false); // Game over state initialized
   const emojis = useRef([]);
   const gradients = [
-    'linear-gradient(to right, #ffffff, #3a7bd5)', // white to blue
     'linear-gradient(to right, #3a7bd5, #3a6073)', // Cool Blue
     'linear-gradient(to right, #4ca1af, #134e5e)', // Light Blue
     'linear-gradient(to right, #134e5e, #71b280)', // Greenish
@@ -85,7 +84,7 @@ const PongGame = ({ width, height }) => {
       velocityY: 4,
     });
 
-    // Reset player position if necessary
+    // Reset player position
     setPlayer(prevPlayer => ({
       ...prevPlayer,
       x: boardWidth / 2 - 50, // Assuming the initial x position is centered
@@ -95,28 +94,6 @@ const PongGame = ({ width, height }) => {
     // Set gameOver to false to restart the game
     setGameOver(false);
   };
-
-  // Initial setup for keyboard controls
-  // useEffect(() => {
-  //     const canvas = canvasRef.current;
-  //     const ctx = canvas.getContext('2d');
-  //     canvas.width = boardWidth;
-  //     canvas.height = boardHeight;
-
-  //     const keyDownHandler = (e) => {
-  //         let newPlayer = { ...player };
-  //         if (e.key === "ArrowLeft") {
-  //             newPlayer.x = Math.max(newPlayer.x - newPlayer.velocityX, 0);
-  //         } else if (e.key === "ArrowRight") {
-  //             newPlayer.x = Math.min(newPlayer.x + newPlayer.velocityX, boardWidth - newPlayer.width);
-  //         }
-  //         setPlayer(newPlayer);
-  //     };
-
-  //     window.addEventListener('keydown', keyDownHandler);
-
-  //     return () => window.removeEventListener('keydown', keyDownHandler);
-  // }, [player, boardWidth, boardHeight]);
 
   // Initial setup for mouse and touch controls
   useEffect(() => {
@@ -154,7 +131,7 @@ const PongGame = ({ width, height }) => {
   // Initialize falling emojis when the game ends
   useEffect(() => {
     if (gameOver) {
-      // Create 15 emojis with random positions and zero initial velocity
+      // Create 8 emojis with random positions and zero initial velocity
       emojis.current = new Array(8).fill(null).map(() => ({
         x: Math.random() * boardWidth,
         y: Math.random() * 50, // Start from the top
@@ -173,14 +150,6 @@ const PongGame = ({ width, height }) => {
     let animationFrameId;
 
     const draw = () => {
-      // const now = Date.now();
-      // const deltaTime = now - lastRenderTime.current;
-      // if (deltaTime < 1000 / 40) { // Limit to ~30 FPS or 40ms per frame
-      //     animationFrameId = requestAnimationFrame(draw);
-      //     return;
-      // }
-      // lastRenderTime.current = now;
-
       ctx.clearRect(0, 0, boardWidth, boardHeight);
       const gradientIndex = Math.floor(score / 3) % gradients.length;
       const gradient = ctx.createLinearGradient(0, 0, boardWidth, 0);
@@ -191,7 +160,7 @@ const PongGame = ({ width, height }) => {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, boardWidth, boardHeight); // Fill background
 
-      // Draw top score
+      // Draw HI Score
       ctx.font =
         '200 22px Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
       ctx.fillStyle = 'white';
@@ -234,37 +203,25 @@ const PongGame = ({ width, height }) => {
         animationFrameId = requestAnimationFrame(draw);
         return;
       }
-      // Update and draw ball
-      // Update ball position
+
+      // draw ball
       ball.x += ball.velocityX;
       ball.y += ball.velocityY;
-
       // Before drawing the emoji, save the current context state
       ctx.save();
-
       // Move the rotation center to the ball's position
       ctx.translate(ball.x, ball.y);
-
       // Rotate the canvas context
       ctx.rotate(rotation);
-
       // Draw the emoji centered on the new origin
       ctx.font = '26px serif'; // Adjust size as needed
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText('⚽', 0, 0); // Draw at the origin, which has been translated to the ball's position
-
       // Restore the canvas context to its original state
       ctx.restore();
-
-      // Update the rotation
       rotation += 0.1; // Adjust this to control the spin speed
 
-      // Draw emoji as ball
-      // ctx.font = '22px serif'; // You might need to adjust the size
-      // ctx.textAlign = 'center';
-      // ctx.textBaseline = 'middle';
-      // ctx.fillText('⚽', ball.x, ball.y); // Use the soccer ball emoji, or choose another
       // Collision with the walls
       if (ball.y <= 0) {
         // Top wall
@@ -287,9 +244,11 @@ const PongGame = ({ width, height }) => {
         ball.velocityY = -Math.abs(ball.velocityY * 1.1);
         setScore(score + 1);
       }
+
       // Draw player
       ctx.fillStyle = 'black'; // Set player color
       ctx.fillRect(player.x, player.y, player.width, player.height);
+
       // Draw score
       ctx.font =
         '200 96px Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // Import your game components
-import PongGame from '../Common/PongGame/PongGame';
+import PongGame from './PongGame/PongGame';
 import { Box, Button, Typography } from '@mui/material';
 // Assume you have a TicTacToe component, replace with your actual game component
 // import TicTacToeGame from '../Common/TicTacToeGame/TicTacToeGame';
