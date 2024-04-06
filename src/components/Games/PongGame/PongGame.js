@@ -6,14 +6,14 @@ const PongGame = ({ width, height }) => {
   // Adjusting the initial states to fit the new canvas size
   const [boardWidth, setBoardWidth] = useState(width || 250); // Default width
   const [boardHeight, setBoardHeight] = useState(height || 650); // Default height
-  const [player, setPlayer] = useState({
+  const [paddle, setPaddle] = useState({
     x: 135,
     y: 610,
     width: 130,
     height: 25,
     borderRadius: 10,
     velocityX: 45,
-  }); // Adjust player dimensions and position
+  }); // Adjust paddle dimensions and position
   const [ball, setBall] = useState({
     x: boardWidth / 2,
     y: boardHeight / 2,
@@ -26,6 +26,7 @@ const PongGame = ({ width, height }) => {
   const [topScore, setTopScore] = useState(
     parseInt(localStorage.getItem('topScore') || '0', 10)
   );
+  const [isBallColliding, setIsBallColliding] = useState(false); // Collision state for tunneling bug fix
   const [gameOver, setGameOver] = useState(false); // Game over state initialized
   const emojis = useRef([]);
   const gradients = [
@@ -49,7 +50,7 @@ const PongGame = ({ width, height }) => {
       velocityX: 5,
       velocityY: 4,
     });
-    setPlayer({
+    setPaddle({
       x: 135,
       y: 610,
       width: 130,
@@ -89,7 +90,7 @@ const PongGame = ({ width, height }) => {
     return false;
   };
 
-  function drawRoundedPlayer(ctx, x, y, width, height, borderRadius) {
+  function drawRoundedPaddle(ctx, x, y, width, height, borderRadius) {
     ctx.beginPath();
     ctx.moveTo(x + borderRadius, y);
     ctx.lineTo(x + width - borderRadius, y);
@@ -115,23 +116,23 @@ const PongGame = ({ width, height }) => {
     const ctx = canvas.getContext('2d');
     canvas.width = boardWidth;
     canvas.height = boardHeight;
-    const updatePlayerPosition = clientX => {
+    const updatePaddlePosition = clientX => {
       const rect = canvas.getBoundingClientRect();
       const scaleX = canvas.width / rect.width; // Relationship bitmap vs. element for X
-      let newX = (clientX - rect.left) * scaleX - player.width / 2; // Adjust mouse position to canvas scale and center paddle
+      let newX = (clientX - rect.left) * scaleX - paddle.width / 2; // Adjust mouse position to canvas scale and center paddle
       newX = Math.max(newX, 0); // Prevent the paddle from moving out of the canvas
-      newX = Math.min(newX, boardWidth - player.width); // Prevent the paddle from moving out of the canvas
-      setPlayer(prevPlayer => ({ ...prevPlayer, x: newX }));
+      newX = Math.min(newX, boardWidth - paddle.width); // Prevent the paddle from moving out of the canvas
+      setPaddle(prevPaddle => ({ ...prevPaddle, x: newX }));
     };
     const mouseMoveHandler = e => {
-      updatePlayerPosition(e.clientX);
+      updatePaddlePosition(e.clientX);
     };
     const touchMoveHandler = e => {
       // Prevent the page from scrolling when dragging on canvas
       e.preventDefault();
       if (e.touches.length === 1) {
         // Single touch
-        updatePlayerPosition(e.touches[0].clientX);
+        updatePaddlePosition(e.touches[0].clientX);
       }
     };
     canvas.addEventListener('mousemove', mouseMoveHandler);
@@ -140,7 +141,7 @@ const PongGame = ({ width, height }) => {
       canvas.removeEventListener('mousemove', mouseMoveHandler);
       canvas.removeEventListener('touchmove', touchMoveHandler);
     };
-  }, [player.width, boardWidth, boardHeight]); // Removed player dependency to avoid re-binding event listeners on player state update
+  }, [paddle.width, boardWidth, boardHeight]); // Removed paddle dependency to avoid re-binding event listeners on paddle state update
 
   // Initialize falling emojis when the game ends
   useEffect(() => {
@@ -228,7 +229,7 @@ const PongGame = ({ width, height }) => {
       // Rotate the canvas context
       ctx.rotate(rotation);
       // Draw the emoji centered on the new origin
-      ctx.font = '26px serif'; // Adjust size as needed
+      ctx.font = '36px serif'; // Adjust size as needed
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText('⚽', 0, 0); // Draw at the origin, which has been translated to the ball's position
@@ -250,27 +251,32 @@ const PongGame = ({ width, height }) => {
         // Game over logic
         setGameOver(true);
       }
+      // tunneling bug fix where the ball renders the collision multiple times
       if (
-        ball.y + ball.height >= player.y &&
-        ball.x >= player.x &&
-        ball.x <= player.x + player.width
+        ball.y + ball.height >= paddle.y &&
+        ball.y <= paddle.y + paddle.height &&
+        ball.x + ball.width >= paddle.x &&
+        ball.x <= paddle.x + paddle.width
       ) {
-        ball.velocityY = -Math.abs(ball.velocityY * 1.06);
-        setScore(score + 1);
+        if (!isBallColliding) {
+          ball.velocityY = -Math.abs(ball.velocityY * 1.06); // Bounce the ball
+          setScore(score + 1);
+          setIsBallColliding(true);
+        }
+      } else {
+        setIsBallColliding(false); // Reset the collision flag if not colliding
       }
 
-      // Draw player
-      ctx.fillStyle = '#212121'; // Set player color
-      drawRoundedPlayer(
+      // Draw paddle
+      ctx.fillStyle = '#212121'; // Set paddle color
+      drawRoundedPaddle(
         ctx,
-        player.x,
-        player.y,
-        player.width,
-        player.height,
-        player.borderRadius
+        paddle.x,
+        paddle.y,
+        paddle.width,
+        paddle.height,
+        paddle.borderRadius
       );
-
-      // ctx.fillRect(player.x, player.y, player.width, player.height);
 
       // Draw score
       ctx.font =
@@ -286,7 +292,7 @@ const PongGame = ({ width, height }) => {
       window.cancelAnimationFrame(animationFrameId);
     };
   }, [
-    player,
+    paddle,
     ball,
     gameOver,
     boardWidth,
