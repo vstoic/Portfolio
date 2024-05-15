@@ -12,7 +12,7 @@ const styles = {
     textAlign: 'center', // Center the content within the container
   },
   bounceText: {
-    color: '#333',
+    // color: '#333',
     fontWeight: '200',
     fontSize: '18px',
     fontFamily:

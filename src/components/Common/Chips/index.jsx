@@ -23,7 +23,7 @@ const SkillChips = props => {
           key={index}
           size="small"
           sx={{
-            color: '#333',
+            // color: '#333',
             border: '.5px solid #333',
             fontSize: '14px',
             fontWeight: '200',

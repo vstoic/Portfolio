@@ -3,26 +3,25 @@ import { useState, Fragment } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import { Typography, useMediaQuery } from '@mui/material';
 // import Sing_Cheng_Resume from '../../assets/Sing_Cheng_Resume.pdf';
 import { Link as RouterLink } from 'react-router-dom';
 //icons
 import DragHandleSharpIcon from '@mui/icons-material/DragHandleSharp';
-import { NavLink } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PongGame from '../Games/PongGame/PongGame';
 import GameDrawer from '../Games/GameDrawer';
-import Button from '@mui/material/Button';
-import { useThemeContext, useCustomTheme } from '../../assets/MaterialThemes';
+import { useCustomTheme } from '../../assets/MaterialThemes';
 import ThemeToggleButton from '../Common/Button/ThemeToggleButton';
-import { NavBox, MobileContainer } from './navstyles';
+import PulsatingNavLink, {
+  NavBox,
+  MobileContainer,
+  NavLink,
+} from './navstyles';
 
 export default function NavBar() {
   const theme = useCustomTheme();
-  const { toggleTheme, themeMode } = useThemeContext();
   const mobileView = useMediaQuery(theme.breakpoints.down('md'));
 
   const [state, setState] = useState({
@@ -99,7 +98,7 @@ export default function NavBar() {
   );
 
   return (
-    <NavBox>
+    <NavBox theme={theme}>
       <MobileContainer>
         <Box
           style={{
@@ -121,16 +120,16 @@ export default function NavBar() {
               </Drawer>
 
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Link component={RouterLink} to="/" className="nav-links">
+                <NavLink component={RouterLink} to="/" theme={theme}>
                   Home
-                </Link>
-                <Link
+                </NavLink>
+                <PulsatingNavLink
                   component={RouterLink}
                   to="/about"
-                  className="nav-links pulsating-link"
+                  theme={theme}
                 >
-                  <Typography>About</Typography>
-                </Link>
+                  About
+                </PulsatingNavLink>
                 <ThemeToggleButton />
                 {/* <Link
               href={Sing_Cheng_Resume}
@@ -150,7 +149,6 @@ export default function NavBar() {
                         lg: 22,
                         xl: 22,
                       },
-                      color: '#333',
                       cursor: 'pointer',
                       margin: '0 8px',
                       '&:hover': {

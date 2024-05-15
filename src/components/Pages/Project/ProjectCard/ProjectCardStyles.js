@@ -6,7 +6,7 @@ export const Title = styled.div`
   fontFamily: 'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
   fontSize: '32px',
   fontWeight: 'bold',
-  color: 'black',
+  // color: 'black',
 `;
 
 export const LinkText = styled.p`
@@ -14,12 +14,12 @@ export const LinkText = styled.p`
     font-weight: 500;
     font-size: 1.2rem;
     margin-bottom: 0px;
-    color: black;
+    // color: black;
     text-decoration: none;
     fontFamily: 'Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
 
     :hover {
-      color: #3f51b5;
+      // color: #3f51b5;
     }
   `;
 
@@ -30,6 +30,7 @@ export const WorkImage = styled.img`
   border-radius: 3px;
   opacity: 0.8;
   transition: opacity 500ms ease;
+  background-color: white;
   box-shadow:
     0px 2px 5px 1px rgba(0, 0, 0, 0.2),
     0px 3px 5px 0px rgba(0, 0, 0, 0.04);
@@ -48,6 +49,7 @@ export const ProjectImage = styled.img`
   opacity: 0.8;
   filter: grayscale(100%);
   transition: opacity 500ms ease;
+  background-color: white;
   box-shadow:
     0px 2px 5px 1px rgba(0, 0, 0, 0.2),
     0px 3px 5px 0px rgba(0, 0, 0, 0.04);
@@ -82,7 +84,7 @@ export const ModalContainer = styled(Box)`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: white;
+  // background-color: white;
   width: 85%;
   height: 85%;
   min-height: 85%;
@@ -120,7 +122,7 @@ export const ModalTextContainer = styled(Box)`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  background-color: white;
+  // background-color: white;
   width: 50%;
   // height: 100%;
   padding: 30px 50px;
@@ -154,7 +156,7 @@ export const styles = {
   },
   textTitle: {
     margin: '4px 0px 0px',
-    color: '#333',
+    // color: '#333',
     textAlign: 'left',
     fontSize: '18px',
     fontWeight: '300',
@@ -163,7 +165,7 @@ export const styles = {
   },
   textJobTitle: {
     margin: '15px 0px 0px',
-    color: 'grey',
+    // color: 'grey',
     textAlign: 'center',
     textTransform: 'uppercase',
     fontSize: '16px',
@@ -172,7 +174,7 @@ export const styles = {
       'Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
   },
   text: {
-    color: 'black',
+    // color: 'black',
     fontSize: '16px',
     fontWeight: 'normal',
     fontFamily:
@@ -199,7 +201,7 @@ export const styles = {
     alignItems: 'center',
   },
   modalTitle: {
-    color: 'black',
+    // color: 'black',
     textAlign: 'center',
     fontSize: '28px',
     fontWeight: ' 200',
@@ -207,7 +209,7 @@ export const styles = {
       'Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
   },
   modalSubTitle: {
-    color: 'black',
+    // color: 'black',
     textAlign: 'center',
     textTransform: 'uppercase',
     marginTop: '24px',
@@ -217,7 +219,7 @@ export const styles = {
       'Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
   },
   modalText: {
-    color: '#333',
+    // color: '#333',
     paddingLeft: '15px',
     fontSize: '14px',
     fontWeight: '200',
@@ -229,7 +231,7 @@ export const styles = {
     cursor: 'pointer',
     fontWeight: '200',
     textDecoration: 'none',
-    color: '0000EE',
+    // color: '0000EE',
     fontSize: '14px',
     fontFamily:
       'Phi, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',

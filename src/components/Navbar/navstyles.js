@@ -1,11 +1,11 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-export const pulse = keyframes`
+const pulse = keyframes`
   0% {
     transform: scale(1);
-    color: #333;
+    color: #ffffff;
   }
   50% {
     transform: scale(1.08);
@@ -13,17 +13,22 @@ export const pulse = keyframes`
   }
   100% {
     transform: scale(1);
-    color: #333;
+    color: #ffffff;
   }
 `;
 
+const pulsatingClass = css`
+  animation: ${pulse} 2.5s 4;
+`;
+
+// Styled components
 export const NavBox = styled(Box)(({ theme }) => ({
-  borderBottom: '1px solid rgb(248, 246, 246)',
+  borderBottom: `1px solid ${theme.palette.border.main}`,
   width: '100%',
   height: '40px',
   display: 'flex',
   alignItems: 'center',
-  backgroundColor: 'white',
+  backgroundColor: theme.palette.background.nav,
   justifyContent: 'center',
   marginBottom: '35px',
   zIndex: 1000,
@@ -41,7 +46,7 @@ export const MobileContainer = styled(Box)({
 
 export const NavLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
-  color: '#333',
+  color: theme.palette.text.link,
   fontWeight: 400,
   fontSize: '16px',
   fontFamily:
@@ -51,7 +56,13 @@ export const NavLink = styled(Link)(({ theme }) => ({
     transition: 'all 0.5s ease-in-out',
     transform: 'scale(1.08)',
   },
-  '&.pulsating-link': {
-    animation: `${pulse} 2.5s 4`,
-  },
 }));
+
+// Apply the pulsating class conditionally
+export const PulsatingNavLink = styled(NavLink)`
+  &.pulsating-link {
+    ${pulsatingClass}
+  }
+`;
+
+export default PulsatingNavLink;

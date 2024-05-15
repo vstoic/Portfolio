@@ -16,7 +16,7 @@ export const StyledTitle = styled.div`
     sans-serif;
   font-size: 34px;
   margin: px 0px 5px 0px;
-  color: black;
+  // color: black;
   font-weight: 100;
   text-align: right;
   letter-spacing: 14px;
@@ -47,7 +47,6 @@ export const StyledText = styled.div`
     Helvetica Neue,
     sans-serif;
   font-size: 16px;
-  color: #333;
   font-weight: 300;
   line-height: 1.4;
   letter-spacing: 0.3px;
@@ -95,24 +94,6 @@ export const StyledText = styled.div`
 //       transition: all .2s ease-in-out;
 //     }
 //   }
-
-//   .flat-button {
-//     color: #4d4d4e;
-//     font-size: 14px;
-//     font-weight: 100;
-//     letter-spacing: 4px;
-//     font-family: helvetica;
-//     text-decoration: none;
-//     padding: 10px 8px;
-//     border-radius: 8px;
-//     border: 1px solid #c1c1c1;
-//     animation: fadeIn 1s 1.8s backwards;
-
-//     &:hover {
-//       background-color: #4d4d4e;
-//       color: #fff;
-//     }
-//   }
 // }
 
 // @media screen and (max-width: 1200px) {
@@ -137,9 +118,5 @@ export const StyledText = styled.div`
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
-//   }
-//   .flat-button {
-//     float: none;
-//     display: block;
 //   }
 // }

@@ -15,7 +15,7 @@ export const StyledTitle = styled.div`
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  color: black;
+  // color: black;
   @media screen and (max-width: 1200px) {
     font-size: 14px;
   }
@@ -36,7 +36,7 @@ export const StyledCompany = styled.div`
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  color: black;
+  // color: black;
   @media screen and (max-width: 1200px) {
     font-size: 12px;
   }
@@ -57,7 +57,7 @@ export const StyledText = styled.div`
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  color: #333;
+  // color: #333;
   @media screen and (max-width: 1200px) {
     font-size: 10px;
   }
