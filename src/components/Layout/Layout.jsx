@@ -1,17 +1,23 @@
 import './Layout.scss';
-import Sidebar from '../Sidebar/Sidebar';
+
 import { Outlet } from 'react-router-dom';
-import MobileSideBar from '../Sidebar/MobileSideBar';
+// import MobileSideBar from '../Sidebar/MobileSideBar';
+import { CssBaseline } from '@mui/material';
+import { ThemeProvider } from '../../assets/MaterialThemes';
+import NavBar from '../Navbar/NavBar';
 
 const Layout = () => {
   return (
-    <div className="App">
-      {/* <MobileSideBar /> */}
-      <Sidebar />
-      <div className="page">
-        <Outlet />
+    <ThemeProvider>
+      <CssBaseline />
+      <div className="App">
+        {/* <MobileSideBar /> */}
+        <NavBar />
+        <div className="page">
+          <Outlet />
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

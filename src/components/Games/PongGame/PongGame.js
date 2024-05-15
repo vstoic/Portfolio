@@ -161,10 +161,18 @@ const PongGame = ({ width, height }) => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
+    let lastTime = 0;
+
     let rotation = 0;
     let animationFrameId;
 
-    const draw = () => {
+    const draw = timestamp => {
+      if (!lastTime) {
+        lastTime = timestamp;
+      }
+      const deltaTime = timestamp - lastTime; // Time passed since last frame
+      lastTime = timestamp;
+
       ctx.clearRect(0, 0, boardWidth, boardHeight);
       const gradientIndex = Math.floor(score / 4) % gradients.length;
       const gradient = ctx.createLinearGradient(0, 0, boardWidth, 0);
@@ -222,6 +230,8 @@ const PongGame = ({ width, height }) => {
       // draw ball
       ball.x += ball.velocityX;
       ball.y += ball.velocityY;
+      // ball.x += ball.velocityX * (deltaTime / 1000);
+      // ball.y += ball.velocityY * (deltaTime / 1000);
       // Before drawing the emoji, save the current context state
       ctx.save();
       // Move the rotation center to the ball's position
@@ -229,7 +239,7 @@ const PongGame = ({ width, height }) => {
       // Rotate the canvas context
       ctx.rotate(rotation);
       // Draw the emoji centered on the new origin
-      ctx.font = '36px serif'; // Adjust size as needed
+      ctx.font = '42px serif'; // Adjust size as needed
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText('⚽', 0, 0); // Draw at the origin, which has been translated to the ball's position
