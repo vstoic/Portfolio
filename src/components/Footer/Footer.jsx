@@ -2,8 +2,10 @@ import { Box, Typography } from '@mui/material';
 import { Divider } from '@mui/material';
 import { StyledLink } from './FooterStyle';
 import { Link as RouterLink } from 'react-router-dom';
+import { useCustomTheme } from '../../assets/MaterialThemes';
 
 export default function Footer() {
+  const theme = useCustomTheme();
   return (
     <Box
       sx={{
@@ -36,10 +38,12 @@ export default function Footer() {
           // rel="noopener noreferrer"
           component={RouterLink}
           to="/"
+          theme={theme}
         >
           SingVictorCheng@gmail.com
         </StyledLink>
         <StyledLink
+          theme={theme}
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/victorcheng3"
@@ -47,6 +51,7 @@ export default function Footer() {
           LinkedIn
         </StyledLink>
         <StyledLink
+          theme={theme}
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/vstoic/vstoic.github.io"
@@ -54,6 +59,7 @@ export default function Footer() {
           Github
         </StyledLink>
         <StyledLink
+          theme={theme}
           target="_blank"
           rel="noopener noreferrer"
           href="https://letterboxd.com/vstoic/"
@@ -61,6 +67,7 @@ export default function Footer() {
           Letterboxd
         </StyledLink>
         <StyledLink
+          theme={theme}
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.strava.com/athletes/3299755"
@@ -68,6 +75,7 @@ export default function Footer() {
           Strava
         </StyledLink>
         <StyledLink
+          theme={theme}
           target="_blank"
           rel="noopener noreferrer"
           href="https://instagram.com/memoir.log"
@@ -78,7 +86,7 @@ export default function Footer() {
       <Box>
         <Typography
           sx={{
-            color: '#4d4d4ec3',
+            // color: '#4d4d4ec3',
             fontWeight: '100',
             fontSize: '14px',
             display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },

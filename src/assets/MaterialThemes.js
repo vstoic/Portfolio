@@ -19,7 +19,7 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#333333',
+      main: '#f5f5f5',
     },
     secondary: {
       main: '#4d4d4d',
@@ -33,7 +33,6 @@ const darkTheme = createTheme({
       primary: '#f5f5f5',
       title: '#f5f5f5',
       secondary: 'rgb(200, 200, 200)',
-
       link: '#ffffff',
     },
     border: {
