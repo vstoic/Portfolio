@@ -23,7 +23,6 @@ const SkillChips = props => {
           key={index}
           size="small"
           sx={{
-            // color: '#333',
             border: '.5px solid',
             fontSize: '14px',
             fontWeight: '200',
@@ -32,7 +31,6 @@ const SkillChips = props => {
             '&:hover': {
               transition: 'all .3s ease-in-out',
               transform: 'scale(1.08)',
-              // color: '#fff',
               backgroundColor: '#333',
             },
           }}
