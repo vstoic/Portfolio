@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from '@mui/material';
 
 export const StyledLink = styled(Link)(({ theme }) => ({
-  textDecoration: 'none',
+  textDecoration: 'none !important',
   textAlign: 'center',
   margin: '0px 20px 5px 0',
   color: theme.palette.text.link,
