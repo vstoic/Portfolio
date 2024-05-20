@@ -10,7 +10,6 @@ let styles = {
     justifyContent: 'center',
     fontFamily:
       'Phi,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif',
-    color: '#333',
     fontSize: '22px',
     fontWeight: '200',
   },

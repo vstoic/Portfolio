@@ -14,10 +14,12 @@ import {
   ModalImageContainer,
   ModalTextContainer,
 } from './ProjectCardStyles';
+import { useCustomTheme } from '../../../../assets/MaterialThemes';
 
 export default function ProjectCard(props) {
   const [open, setOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const theme = useCustomTheme();
 
   const handleOpen = project => {
     setSelectedProject(project);
@@ -57,7 +59,7 @@ export default function ProjectCard(props) {
             onMouseEnter={handleMouseEnterWork}
             onMouseLeave={handleMouseLeaveWork}
           />
-          <Box className="project-text" style={styles.textContainer}>
+          <Box style={styles.textContainer}>
             <Typography style={styles.textJobTitle}>
               {props.project.jobTitle}
             </Typography>
@@ -76,7 +78,7 @@ export default function ProjectCard(props) {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           />
-          <Box className="project-text" style={styles.textContainer}>
+          <Box style={styles.textContainer}>
             <Typography style={styles.textJobTitle}>
               {props.project.description}
             </Typography>
@@ -99,7 +101,7 @@ export default function ProjectCard(props) {
 
           {/* project type*/}
           {selectedProject?.type === 'project' && (
-            <ModalTextContainer>
+            <ModalTextContainer theme={theme}>
               <Box style={styles.exitButtonContainer}>
                 <IconButton style={styles.exitButton} onClick={handleClose}>
                   <CloseIcon fontSize="large" />
@@ -138,7 +140,7 @@ export default function ProjectCard(props) {
 
           {/* work type */}
           {selectedProject?.type === 'work' && (
-            <ModalTextContainer>
+            <ModalTextContainer theme={theme}>
               <Box style={styles.exitButtonContainer}>
                 <IconButton style={styles.exitButton} onClick={handleClose}>
                   <CloseIcon fontSize="large" />

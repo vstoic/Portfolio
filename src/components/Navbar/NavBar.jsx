@@ -72,7 +72,9 @@ export default function NavBar() {
             }}
           >
             <ListItemButton sx={{ justifyContent: 'center' }}>
-              <GitHubIcon sx={{ fontSize: 35, color: '#333' }} />
+              <GitHubIcon
+                sx={{ fontSize: 35, color: theme.palette.text.primary }}
+              />
             </ListItemButton>
           </a>
           <a

@@ -3,7 +3,7 @@ import './home.scss';
 import { workList } from '../../../assets/content/work';
 import { skillsList } from '../../../assets/content/skills';
 import { projectsList } from '../../../assets/content/projects';
-import ProjectCard from '../Project/ProjectCard/ProjectCard';
+import ProjectCard from '../../Common/Card/ProjectCard/ProjectCard';
 import FloatingArrow from '../../Common/Arrow/Arrow';
 import Footer from '../../Footer/Footer';
 import SkillChips from '../../Common/Chips';

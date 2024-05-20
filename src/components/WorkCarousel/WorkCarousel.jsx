@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 // Import Swiper styles
@@ -9,11 +8,6 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './workCarousel.scss';
 import { EffectCoverflow, Pagination } from 'swiper';
-//imports for modal
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import { border, margin } from '@mui/system';
 
 const style = {
   position: 'absolute',
