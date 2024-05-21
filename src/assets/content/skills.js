@@ -52,7 +52,7 @@ export const skillsList = [
     title: 'SQL',
   },
   {
-    avatar: '/Nodejs.png',
+    avatar: '/NodeJS.png',
     title: 'Node.js',
   },
   {
@@ -72,7 +72,7 @@ export const skillsList = [
     title: 'Vim',
   },
   {
-    avatar: '/vscode.png',
+    avatar: '/VSCode.png',
     title: 'VSCode',
   },
   {
@@ -100,11 +100,11 @@ export const skillsList = [
     title: 'Postman',
   },
   {
-    avatar: '/webpack.png',
+    avatar: '/Webpack.png',
     title: 'Webpack',
   },
   {
-    avatar: '/figma.png',
+    avatar: '/Figma.png',
     title: 'Figma',
   },
   {
@@ -112,7 +112,7 @@ export const skillsList = [
     title: 'Lightroom',
   },
   {
-    avatar: '/photoshop.png',
+    avatar: '/Photoshop.png',
     title: 'Photoshop',
   },
 ];
