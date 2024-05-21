@@ -1,118 +1,118 @@
 export const skillsList = [
   {
-    avatar: '/react-logo.png',
+    avatar: '/React.png',
     title: 'React',
   },
   {
-    avatar: '/js.png',
+    avatar: '/JavaScript.png',
     title: 'JavaScript',
   },
   {
-    avatar: '/typescript-logo.png',
+    avatar: '/TypeScript.png',
     title: 'TypeScript',
   },
   {
-    avatar: '/ruby-on-rails-logo.png',
+    avatar: '/RubyOnRails.png',
     title: 'Ruby on Rails',
   },
   {
-    avatar: '/python-logo.png',
+    avatar: '/Python.png',
     title: 'Python',
   },
   {
-    avatar: '/redux-logo.png',
+    avatar: '/Redux.png',
     title: 'Redux',
   },
   {
-    avatar: '/html5-logo.png',
+    avatar: '/HTML5.png',
     title: 'HTML5',
   },
   {
-    avatar: '/css-logo.png',
+    avatar: '/css3.png',
     title: 'CSS',
   },
   {
-    avatar: '/scss-logo.png',
-    title: 'SCSS',
+    avatar: '/sass.png',
+    title: 'SASS',
   },
   {
-    avatar: '/tailwind-css-logo.png',
+    avatar: '/tailwindcss.png',
     title: 'Tailwind CSS',
   },
   {
-    avatar: '/mui-logo.png',
+    avatar: '/MaterialUI.png',
     title: 'MUI (Material-UI)',
   },
   {
-    avatar: '/mongodb-logo.png',
+    avatar: '/mongodb.png',
     title: 'MongoDB',
   },
   {
-    avatar: '/sql-logo.png',
+    // avatar: '/sql.png',
     title: 'SQL',
   },
   {
-    avatar: '/nodejs-logo.png',
+    avatar: '/nodejs.png',
     title: 'Node.js',
   },
   {
-    avatar: '/axios-logo.png',
+    // avatar: '/axios.png',
     title: 'Axios',
   },
   {
-    avatar: '/jquery-logo.png',
+    // avatar: '/jquery.png',
     title: 'jQuery',
   },
   {
-    avatar: '/expressjs-logo.png',
+    avatar: '/express.png',
     title: 'Express.js',
   },
   {
-    avatar: '/vim-logo.png',
+    avatar: '/vim.png',
     title: 'Vim',
   },
   {
-    avatar: '/vscode-logo.png',
+    avatar: '/vscode.png',
     title: 'VSCode',
   },
   {
-    avatar: '/bash-logo.png',
+    avatar: '/bash.png',
     title: 'Bash',
   },
   {
-    avatar: '/git-logo.png',
+    avatar: '/git.png',
     title: 'Git',
   },
   {
-    avatar: '/vmware-logo.png',
+    // avatar: '/vmware.png',
     title: 'VMware',
   },
   {
-    avatar: '/supabase-logo.png',
+    // avatar: '/supabase.png',
     title: 'Supabase',
   },
   {
-    avatar: '/vite-logo.png',
+    avatar: '/vite.png',
     title: 'Vite',
   },
   {
-    avatar: '/postman-logo.png',
+    avatar: '/postman.png',
     title: 'Postman',
   },
   {
-    avatar: '/webpack-logo.png',
+    avatar: '/webpack.png',
     title: 'Webpack',
   },
   {
-    avatar: '/figma-logo.png',
+    avatar: '/figma.png',
     title: 'Figma',
   },
   {
-    avatar: '/lightroom-logo.png',
+    // avatar: '/lightroom.png',
     title: 'Lightroom',
   },
   {
-    avatar: '/photoshop-logo.png',
+    avatar: '/photoshop.png',
     title: 'Photoshop',
   },
 ];

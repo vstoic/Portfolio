@@ -6,7 +6,7 @@ import { projectsList } from '../../../assets/content/projects';
 import ProjectCard from '../../Common/Card/ProjectCard/ProjectCard';
 import FloatingArrow from '../../Common/Arrow/Arrow';
 import Footer from '../../Footer/Footer';
-import SkillChips from '../../Common/Chips';
+import SkillChips from '../../Common/Chips/SkillChips';
 import { useCustomTheme } from '../../../assets/MaterialThemes';
 import { StyledTitle1, StyledTitle2 } from './homeStyles';
 import { Link as RouterLink } from 'react-router-dom';

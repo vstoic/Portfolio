@@ -53,6 +53,7 @@ const lightTheme = createTheme({
     },
     secondary: {
       main: '#666666', // Light gray
+      light: '#f5f5f5',
     },
     background: {
       default: '#ffffff', // White background
