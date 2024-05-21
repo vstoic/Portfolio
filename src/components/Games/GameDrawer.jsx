@@ -29,7 +29,7 @@ export default function GameDrawer() {
 
   // Handlers to switch games
   const openPong = () => setActiveGame('pong');
-  const closeGames = () => setActiveGame('none');
+  // const closeGames = () => setActiveGame('none');
 
   // Function to conditionally render the game based on state
   const renderGame = () => {

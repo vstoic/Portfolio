@@ -3,12 +3,11 @@ import { useState, Fragment } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import ListItemButton from '@mui/material/ListItemButton';
-import { Typography, useMediaQuery } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 // import Sing_Cheng_Resume from '../../assets/Sing_Cheng_Resume.pdf';
 import { Link as RouterLink } from 'react-router-dom';
 //icons
 import DragHandleSharpIcon from '@mui/icons-material/DragHandleSharp';
-import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GameDrawer from '../Games/GameDrawer';

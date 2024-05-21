@@ -38,6 +38,10 @@ const darkTheme = createTheme({
     border: {
       main: '#4d4d4d',
     },
+    shadow: {
+      main: '#1A1A1A',
+      secondary: '#1C1C1C',
+    },
   },
 });
 
@@ -62,6 +66,10 @@ const lightTheme = createTheme({
     border: {
       main: 'rgb(248, 246, 246)', // Black border
       other: '#f5f5f5',
+    },
+    shadow: {
+      main: '#E3E3E3',
+      secondary: '#E6E6E6',
     },
   },
 });

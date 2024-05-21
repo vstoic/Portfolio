@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Box, Modal } from '@mui/material';
+// import { Image } from '@mui/icons-material';
 // import Modal from '@mui/material/Modal';
 
 export const Title = styled.div`
@@ -22,43 +23,37 @@ export const LinkText = styled.p`
     }
   `;
 
-export const WorkImage = styled.img`
-  width: 388px;
-  height: 285px;
-  object-fit: cover;
-  border-radius: 3px;
-  opacity: 0.8;
-  transition: opacity 500ms ease;
-  background-color: white;
-  box-shadow:
-    0px 2px 5px 1px rgba(0, 0, 0, 0.2),
-    0px 3px 5px 0px rgba(0, 0, 0, 0.04);
+export const WorkImage = styled.img(({ theme }) => ({
+  width: '388px',
+  height: '285px',
+  objectFit: 'cover',
+  borderRadius: '3px',
+  opacity: '0.8',
+  transition: 'opacity 500ms ease',
+  backgroundColor: 'white',
+  boxShadow: `0px 2px 5px 1px ${theme.palette.shadow.main}, 0px 3px 5px 0px ${theme.palette.shadow.secondary}`,
+  '@media (max-width: 1200px)': {
+    height: 'auto',
+    width: '100%',
+  },
+}));
 
-  @media (max-width: 1200px) {
-    height: auto%;
-    width: 100%;
-  }
-`;
-
-export const ProjectImage = styled.img`
-  width: 388px;
-  height: 285px;
-  object-fit: cover;
-  border-radius: 3px;
-  opacity: 0.8;
-  filter: grayscale(100%);
-  transition: opacity 500ms ease;
-  background-color: white;
-  box-shadow:
-    0px 2px 5px 1px rgba(0, 0, 0, 0.2),
-    0px 3px 5px 0px rgba(0, 0, 0, 0.04);
-
-  @media (max-width: 1200px) {
-    height: auto%;
-    width: 100%;
-    filter: grayscale(0%);
-  }
-`;
+export const ProjectImage = styled.img(({ theme }) => ({
+  width: '388px',
+  height: '285px',
+  objectFit: 'cover',
+  borderRadius: '3px',
+  opacity: '0.8',
+  filter: 'grayscale(100%)',
+  transition: 'opacity 500ms ease',
+  backgroundColor: 'white',
+  boxShadow: `0px 2px 5px 1px ${theme.palette.shadow.main}, 0px 3px 5px 0px ${theme.palette.shadow.secondary}`,
+  '@media (max-width: 1200px)': {
+    height: 'auto',
+    width: '100%',
+    filter: 'grayscale(0%)',
+  },
+}));
 
 export const CustomModal = styled(Modal)`
   display: flex;
@@ -127,7 +122,7 @@ export const ModalTextContainer = styled(Box)(({ theme }) => ({
   '@media (max-width: 900px)': {
     width: '80vw',
     height: '100%',
-    padding: '20px 0px 30px 0px',
+    padding: '20px 20px 30px 20px',
   },
 }));
 

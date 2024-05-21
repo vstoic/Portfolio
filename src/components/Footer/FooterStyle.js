@@ -21,6 +21,6 @@ export const StyledLink = styled(Link)(({ theme }) => ({
     color: theme.palette.text.link,
     fontSize: '14px',
     textAlign: 'left',
-    margin: '0px 0px 20px 10%', // Adjust margins for mobile
+    margin: '0px 0px 20px 0px', // Adjust margins for mobile
   },
 }));

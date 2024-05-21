@@ -56,6 +56,7 @@ export default function ProjectCard(props) {
           <WorkImage
             src={props.project.imageSrc}
             alt="none"
+            theme={theme}
             onMouseEnter={handleMouseEnterWork}
             onMouseLeave={handleMouseLeaveWork}
           />
@@ -75,6 +76,7 @@ export default function ProjectCard(props) {
           <ProjectImage
             src={props.project.imageSrc}
             alt="none"
+            theme={theme}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           />

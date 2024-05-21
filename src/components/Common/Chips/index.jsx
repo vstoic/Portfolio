@@ -31,7 +31,7 @@ const SkillChips = props => {
             '&:hover': {
               transition: 'all .3s ease-in-out',
               transform: 'scale(1.08)',
-              backgroundColor: '#333',
+              // backgroundColor: '#333',
             },
           }}
         />

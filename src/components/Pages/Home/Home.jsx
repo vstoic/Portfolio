@@ -26,10 +26,10 @@ const Home = () => {
               <img src="/self.jpg" alt="victor cheng" className="pfp" />
               <div className="title-text-container">
                 <StyledTitle1 component={RouterLink} to="/about" theme={theme}>
-                  Hi, I'm Victor Cheng
+                  Victor Cheng.
                 </StyledTitle1>
                 <StyledTitle2 component={RouterLink} to="/about" theme={theme}>
-                  Frontend Engineer / FullStack Engineer
+                  Software Engineer & Frontend Web Developer
                 </StyledTitle2>
               </div>
             </div>

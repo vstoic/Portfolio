@@ -16,6 +16,7 @@ export default function Footer() {
         justifyContent: 'center',
         flexDirection: 'column',
         marginTop: '80px',
+        marginBottom: '25px',
         padding: { xs: '0 20px', sm: '0 20px', md: '0 0', lg: '0 0' },
       }}
     >
@@ -90,7 +91,7 @@ export default function Footer() {
             fontWeight: '100',
             fontSize: '14px',
             display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
-            margin: '10px 30px 55px 0',
+            margin: '10px 30px 55px 0px',
             fontFamily: `Phi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
               Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,
             letterSpacing: '1px',
