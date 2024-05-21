@@ -28,15 +28,15 @@ export const skillsList = [
     title: 'HTML5',
   },
   {
-    avatar: '/css3.png',
+    avatar: '/CSS3.png',
     title: 'CSS',
   },
   {
-    avatar: '/sass.png',
+    avatar: '/Sass.png',
     title: 'SASS',
   },
   {
-    avatar: '/tailwindcss.png',
+    avatar: '/TailwindCSS.png',
     title: 'Tailwind CSS',
   },
   {
@@ -44,7 +44,7 @@ export const skillsList = [
     title: 'MUI (Material-UI)',
   },
   {
-    avatar: '/mongodb.png',
+    avatar: '/MongoDB.png',
     title: 'MongoDB',
   },
   {
@@ -52,7 +52,7 @@ export const skillsList = [
     title: 'SQL',
   },
   {
-    avatar: '/nodejs.png',
+    avatar: '/Nodejs.png',
     title: 'Node.js',
   },
   {
@@ -64,11 +64,11 @@ export const skillsList = [
     title: 'jQuery',
   },
   {
-    avatar: '/express.png',
+    avatar: '/Express.png',
     title: 'Express.js',
   },
   {
-    avatar: '/vim.png',
+    avatar: '/Vim.png',
     title: 'Vim',
   },
   {
@@ -76,11 +76,11 @@ export const skillsList = [
     title: 'VSCode',
   },
   {
-    avatar: '/bash.png',
+    avatar: '/Bash.png',
     title: 'Bash',
   },
   {
-    avatar: '/git.png',
+    avatar: '/Git.png',
     title: 'Git',
   },
   {
@@ -92,11 +92,11 @@ export const skillsList = [
     title: 'Supabase',
   },
   {
-    avatar: '/vite.png',
+    avatar: '/Vite.png',
     title: 'Vite',
   },
   {
-    avatar: '/postman.png',
+    avatar: '/Postman.png',
     title: 'Postman',
   },
   {
