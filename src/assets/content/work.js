@@ -1,13 +1,34 @@
 export const workList = [
   {
     type: 'work',
+    name: 'Asian CineVision',
+    imageSrc: '/ACV.png',
+    skills: 'React, Redux, Gatsby, Mui, Emotion, Webpack, Open Source Maps',
+    jobTitle: 'Web Developer',
+    description: 'coming soon',
+    time: 'May 2024 - Present',
+    outcome: `coming soon`,
+  },
+  {
+    type: 'work',
+    name: 'NY Code & Coffee',
+    imageSrc: '/code_&_cooffee_logo.png',
+    jobTitle: 'Core Volenteer',
+    // skills: 'React, Next.js, Node.js, Mui, Emotion, AWS (S3, CloudFront), Webpack, HTTP/3',
+    // description: 'Quintana Roo: Waste Recovery & Restore',
+    // outcome: ``,
+    description: 'updates soon',
+    time: 'March 2024 - Present',
+  },
+  {
+    type: 'work',
     name: 'Cirrus Data Solutions Inc.',
     imageSrc: '/cirrus-logo.png',
     skills: 'React, Redux, Typescript, Python, Vim, Linux, Red Hat, VMware ',
     jobTitle: 'Software Development Engineer',
     description:
       'Gained hands-on experience in software development. Collaborated with the development team on various projects, contributing to the development and enhancement of internal web features using React and Typescript. Assisted in managing VMWare test environments, optimizing processes for clients and internal engineers.',
-    time: 'Mar 2023 - Present',
+    time: 'Mar 2023 - April 2024',
     outcome: `Acquired proficiency in utilizing Python to architect APIs for backend application development. Acquired skills in Vim within a Linux environment to script without relying on conventional code editors. Attained skills in managing VMware's Cloud Sphere, enhancing skills in cloud infrastructure management. Expanded knowledge in data management and transfer.`,
   },
   {
@@ -26,17 +47,6 @@ export const workList = [
     fullDescription: `ProjectQRRestore is a web application that aims to recover waste, organize local communities, and restore the coral reefs in Quintana Roo, Mexico. The website provides information for the community to organize cleanups and restoration efforts. The site also includes a map that displays the locations of the cleanups and restoration efforts. The site is designed to be user-friendly and informative, with a clean and modern design. The site is built using React, Next.js, Node, and Material-UI.`,
     time: 'Sept 2022 - January 2023',
     liveLink: 'https://www.projectqrrestore.com/',
-  },
-  {
-    type: 'work',
-    name: 'NY Code & Coffee',
-    imageSrc: '/code_&_cooffee_logo.png',
-    jobTitle: 'Core Volenteer',
-    // skills: 'React, Next.js, Node.js, Mui, Emotion, AWS (S3, CloudFront), Webpack, HTTP/3',
-    // description: 'Quintana Roo: Waste Recovery & Restore',
-    // outcome: ``,
-    description: '',
-    time: 'March 2024 - Present',
   },
   {
     type: 'work',

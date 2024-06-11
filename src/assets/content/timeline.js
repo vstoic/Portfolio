@@ -5,7 +5,15 @@ import HelpIcon from '@mui/icons-material/Help';
 export const careerTimeline = [
   {
     icon: <WorkIcon />,
-    time: 'April 2023 - Present',
+    time: 'April 2024 - Present',
+    title: 'Web Developer',
+    company: 'Asian CineVision',
+    location: 'New York, NY',
+    description: ``,
+  },
+  {
+    icon: <WorkIcon />,
+    time: 'April 2023 - April 2024',
     title: 'Software Development Engineer',
     company: 'Cirrus Data Solutions Inc.',
     location: 'Syosset, NY',

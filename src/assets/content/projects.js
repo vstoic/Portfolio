@@ -17,7 +17,7 @@ export const projectsList = [
     technology: 'React, Redux, Ruby on Rails, PostgreSQL, AWS S3',
     description: 'Yelp Clone',
     fullDescription:
-      'A fullstack, single-page web application inspired by Yelp ... what did i learn?',
+      'A fullstack, single-page web application inspired by Yelp', // ... what did i learn?',
     liveLink: 'https://felpp.herokuapp.com/#/',
     githubLink: 'https://github.com/vstoic/Felp',
   },
