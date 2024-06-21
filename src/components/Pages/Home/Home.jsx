@@ -23,7 +23,7 @@ const Home = () => {
         <div className="text-zone">
           <a href="#/about" className="about-path">
             <div className="title-container">
-              <img src="/self.jpg" alt="victor cheng" className="pfp" />
+              <img src="/self.jpeg" alt="victor cheng" className="pfp" />
               <div className="title-text-container">
                 <StyledTitle1 component={RouterLink} to="/about" theme={theme}>
                   Victor Cheng.
