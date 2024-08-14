@@ -13,7 +13,7 @@ export const workList = [
     type: 'work',
     name: 'NY Code & Coffee',
     imageSrc: '/code_&_cooffee_logo.png',
-    jobTitle: 'Core Volenteer',
+    jobTitle: 'Core Volunteer',
     // skills: 'React, Next.js, Node.js, Mui, Emotion, AWS (S3, CloudFront), Webpack, HTTP/3',
     // description: 'Quintana Roo: Waste Recovery & Restore',
     // outcome: ``,

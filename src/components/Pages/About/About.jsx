@@ -40,12 +40,13 @@ const About = () => {
           <StyledText>
             I thrive on challenges and constantly seek new adventures, finding
             an unrivaled thrill in building something from the ground up and
-            witnessing it come alive. Transitioning from five years in real
-            estate—following in my family's footsteps—I realized the stress from
-            sales wasn't worthwhile. I yearned for a new career, an escape.
-            Despite the uncertain economy, my instincts pulled me toward
-            software engineering, and you know what? I jumped right in. Was it
-            daunting? Absolutely, but that's the beauty of the journey!
+            seeing it come to life. After spending five years in real
+            estate—following in my family's footsteps—I gained valuable
+            experience but felt drawn to explore new horizons. When covid hit, I
+            felt a sudden urge to test myself with coding, and I discovered that
+            it brings me genuine pleasure. That’s when I decided to go full
+            throttle into a new career in software engineering. Was it daunting?
+            Absolutely, but that's the beauty of the journey!
           </StyledText>
           <StyledText>
             Beyond improving my coding abilities, I'm also working on setting

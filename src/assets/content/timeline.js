@@ -64,10 +64,10 @@ export const careerTimeline = [
   {
     icon: <SchoolIcon />,
     time: '2014-2018',
-    title: 'College Student',
-    company: 'CUNY Baruch College',
+    title: 'Baruch College',
+    company: 'City University of New York',
     location: 'New York, NY',
-    description: 'Major: Corporate Communications',
+    description: 'BA Corporate Communications',
   },
   {
     icon: <HelpIcon />,
